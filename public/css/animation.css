@@ -1,0 +1,637 @@
+@charset "utf-8";
+/*------ローディング------*/
+#splash{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: #B88729;
+    text-align: center;
+}
+#splash_logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#splash p{
+    width: 260px;
+}
+
+
+/*------Menuボタン--------*/
+.openbtn{
+    position: relative;
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    z-index: 9999;
+    margin: 1% 0 0 1%;
+    /*margin: 0 0 0 auto;*/
+}
+.menubox{
+    display: none;
+    width: 200px;
+    border-radius: 5px;
+    margin: -50px 0 0 1%;
+    padding: 70px 1% 1% 1%;
+    background-color: rgba(0, 0, 0, 1);
+}
+.menubox li{
+    color: #ffffff;
+    text-align: center;
+}
+.menubox_login{
+    display: flex;
+    width: 100%;
+    color: #ffffff;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+}
+.openbtn span:nth-of-type(1),
+.openbtn span:nth-of-type(3){
+    height: 2px;
+    background-color: #ffffff;
+    width: 62%;
+    left: 10px;
+}
+.openbtn span:nth-of-type(1){
+    top: 13px;
+}
+.openbtn span:nth-of-type(2){
+    top: 19px;
+    left: 11px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.openbtn span:nth-of-type(3){
+    top: 36px;
+}
+.openbtn.active span:nth-of-type(1){
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.openbtn.active span:nth-of-type(2){
+    opacity: 0;
+}
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+.menubox.active{
+    display: block;
+}
+
+/*------ユーザーeditボタン--------*/
+.user_edit_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #B88729;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 10vh 10% 0 0;
+    z-index: 10;
+}
+.editbox{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    border-radius: 5px;
+    margin: 10vh 10% 0 0;
+    padding: 1%;
+    background-color: #B88729;
+}
+.editbox li{
+    color: #ffffff;
+    text-align: center;
+}
+.editbox_login{
+    display: flex;
+    width: 100%;
+    color: #ffffff;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.user_edit_btn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    margin: 0 auto;
+}
+.user_edit_btn span:nth-of-type(1),
+.user_edit_btn span:nth-of-type(3){
+    height: 2px;
+    background-color: #ffffff;
+    width: 62%;
+    left: 10px;
+}
+.user_edit_btn span:nth-of-type(1){
+    top: 13px;
+}
+.user_edit_btn span:nth-of-type(2){
+    top: 19px;
+    left: 11px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.user_edit_btn span:nth-of-type(3){
+    top: 36px;
+}
+.user_edit_btn.active span:nth-of-type(1){
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.user_edit_btn.active span:nth-of-type(2){
+    opacity: 0;
+}
+.user_edit_btn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+.editbox.active{
+    display: block;
+}
+
+/*------ページナビゲーション--------*/
+.pagination{
+    position: fixed;
+    display: block;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5px;
+    z-index: 10;
+    list-style: none;
+}
+.pagination a{
+    display: block;
+    height: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    position: relative;
+    padding: 4px;
+}
+.pagination a.active:after{
+    box-shadow: inset 0 0 0 5px;
+}
+.pagination a.hover-text{
+    position: absolute;
+    right: 15px;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    padding-right: 15px;
+}
+.pagination a:hover .hover-text{
+    opacity: 1;
+}
+.pagination a:after{
+    -webkit-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 3px;
+    bottom: 0;
+}
+
+
+/*------ページトップへ戻る----------*/
+#page-top a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('image/pagetop-tree.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10vh;
+    height: 20vh;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#page-top a:hover{
+    background-image: url('image/pagetop-tree-hover.png');
+}
+#page-top{
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(100px);
+}
+#page-top.UpMove{
+    animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+    from{
+        opacity: 1;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#page-top.DownMove{
+    animation: UpAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+/*--------背景slick---------*/
+#vegas{
+    width: 100%;
+    margin: 0;
+}
+#vegas li{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+#CONCEPT{
+    background-color: rgba(211, 210, 191, 1);
+}
+#ACTION{
+    background-color: rgba(225, 198, 192, 1);
+}
+#GALLERY{
+    background-color: rgba(94, 101, 102, 0.8);
+}
+#BLOG{
+    background-color: rgba(36, 49, 70, 1);
+}
+#ACCESS{
+    background-color: rgba(52, 97, 78, 1);
+}
+
+/*--------topフェードアウト＆フェードイン---------*/
+.blur_disappear{
+    animation-name: disBlurAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes disBlurAnime{
+    from{
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        filter: blur(10px);
+        transform: scale(1.02);
+        opacity: 0;
+    }
+}
+.carry_fukurou{
+    text-align: center;
+    opacity: 0;
+    margin-top: -80px;
+}
+.carry_fukurou img{
+    width: 100px;
+    font-size: 30px;
+    margin: 0;
+}
+.blur{
+    animation-name: blurAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes blurAnime{
+    from{
+        filter: blur(10px);
+        transform: scale(1.02);
+        opacity: 0;
+    }
+    to{
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*------hoverで背景画像が拡大-------*/
+.zoomInText{
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1vh;
+}
+.zoomInText span.mask{
+    position: relative;
+    transition: .3s ease-in-out;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+}
+.zoomInText:hover span.mask::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 1px #ffffff;
+}
+.zoomInText img{
+    transition: scale(1);
+    filter: blur(0);
+    transition: .3s ease-in-out;
+}
+.zoomInText:hover img{
+    transform: scale(1.2);
+    filter: blur(2px);
+}
+.zoomInText span.cap{
+    opacity: 0;
+    transition: .5s ease-in-out;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+.zoomInText:hover span.cap{
+    opacity: 1;
+}
+
+/*-------左下から上に出現する-------*/
+.smooth{
+    animation-name: smoothAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform-origin: left;
+    opacity: 0;
+}
+@keyframes smoothAnime{
+    from{
+        transform: translate3d(0, 100%, 0) skewY(12deg);
+        opacity: 0;
+    }
+    to{
+        transform: translate3d(0, 0, 0) skewY(0);
+        opacity: 1;
+    }
+}
+
+/*---------左から色がスライドでつく-------*/
+.slide_btn{
+    position: relative;
+    width: 100%;
+    line-height: 5vh;
+    padding: 1%;
+    text-align: center;
+    color: #362607;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+    transition: ease .2s;
+    margin-bottom: 2vh;
+}
+.slide_btn span{
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    vertical-align: middle;
+    line-height: normal;
+}
+.slide_btn:hover span{
+    color: #362607;
+}
+.borderleft::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -130%;
+    background: #feef4d;
+    width: 120%;
+    height: 100%;
+    transform: skewX(-25deg);
+}
+.borderleft:hover::before{
+    animation: slideAnime .5s forwards;
+}
+@keyframes slideAnime{
+    100%{
+        left: -20%;
+    }
+}
+
+/*--------左から色が変わる２---------*/
+.btnchange{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 7vh;
+    background-color: #676767ba;
+    padding: 1.3vh 2% 0 2%;
+    transition: ease .2s;
+}
+.btnchange span{
+    position: relative;
+    margin: 0 auto;
+    z-index: 3;
+    font-size: 1.3vw;
+    color: #ffffff;
+}
+.btnchange:hover span{
+    color: #000000;
+}
+.bgleft::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #feef4d;
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+.bgleft:hover::before{
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+/*----------右からナビが出てくる-------*/
+.blog_right_bar{
+    display: flex;
+    width: 50%;
+    height: 30vh;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    padding: 1%;
+    border-radius: 5px;
+    border: dashed 1px #000000;
+    background-color: #B88729;
+}
+
+/*----------フェードで出現する--------*/
+.fade_up{
+    animation-name: fadeup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeup{
+   from {
+       opacity: 0;
+       transform: translateY(100px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+/*----------ページ内で画面を切り替える-----------*/
+@keyframes displayAnime{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*-----------hoverすると文字が出てくる-----------*/
+.lineText{
+    position: relative;
+}
+.lineText span.mask{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.lineText span.mask img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lineText:hover span.mask img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 50%;
+}
+.lineText span.mask::before,
+.lineText span.mask::after{
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    bottom: 8%;
+    left: 5%;
+    z-index: 3;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.lineText span.mask::before{
+    border-top: solid 1px #ffffff;
+    border-bottom: solid 1px #ffffff;
+    transform: scale(0, 1);
+}
+.lineText span.mask::after{
+    border-right: solid 1px #ffffff;
+    border-left: solid 1px #ffffff;
+    transform: scale(1, 0);
+}
+.lineText:hover span.mask::before,
+.lineText:hover span.mask::after{
+    opacity: 1;
+    transform: scale(1);
+}
+.lineText span.cap{
+    opacity: 0;
+    transition: .5s ease-in-out;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+.lineText:hover span.cap{
+    opacity: 1;
+}
+
+/*-----hoverするとくるっと回る--------*/
+.flipY a{
+    position: relative;
+    display: block;
+}
+.flipY img{
+    transition: all 0.35s ease;
+    backface-visibility: hidden;
+}
+.flipY a:hover img{
+    transform: rotateY(-180deg);
+    opacity: 0;
+}
+
+.flipY span.cap{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.35s ease;
+    transform: rorateY(90deg);
+    transform-origin: 50% 0%;
+    opacity: 0;
+    background-color: #ffffff;
+    align-items: center;
+}
+.flipY a:hover span.cap{
+    transform: rotate(0);
+    opacity: 1;
+    transition-delay: 0.15s;
+}

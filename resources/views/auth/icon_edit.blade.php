@@ -1,0 +1,38 @@
+@extends('layouts.logged_in')
+
+@section('main')
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
+    <form method="POST" action="{{ route('user.icon_update', $user->id) }}" enctype="multipart/form-data" class="detail">
+        @csrf
+        @method('patch')
+        <p class="edit_mypage">アイコン画像変更</p>
+        <div class="mypage_image_change">
+            <p>(現在の画像)</p>
+            @if ($user->icon_image !== '')
+                <img src="{{ asset('storage/' . $user->icon_image) }}">
+            @else
+            <img src="{{ asset('css/image/bird_mimizuku.png') }}" alt="デフォルト画像" class="user_image">
+            @endif
+        </div>
+        <div class="form-group form-row">
+            <label class="col-md-3 col-form-label text-md-right">アイコン画像: </label>
+            <div class="col-md-9">
+                <input type="file" name="icon_image">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-11 text-right">
+                <input type="submit" value="上書き保存" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+@endsection

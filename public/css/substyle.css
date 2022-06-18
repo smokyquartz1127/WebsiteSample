@@ -1,0 +1,654 @@
+
+/*-------------------reserve-------------------*/
+.reserve_back{
+    min-height: 100vh;
+    /*background-color: #A6936E;*/
+    background-image: url('image/saboten.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.reserve_header_title{
+    height: 20vh;
+    color: #362607;
+    font-size: 5vmin;
+    padding-top: 5vmin;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+}
+.flex_reserve{
+    justify-content: space-between;
+}
+.flex_reserve h2{
+    font-size: 3vmin;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+}
+.reserve_left{
+    /*width: 60%;*/
+    background-color: #ffffff;
+    margin: 5% 0 5% 10%;
+    padding: 5%;
+    border: solid 1px #000000;
+}
+.reserve_left form{
+    margin: 5vh 0 0 0;
+}
+.reserve_left input,select{
+    border: solid 1px #362607;
+}
+.reserve_right{
+    /*width: 20vw;*/
+    height: 30vh;
+    background-color: #ffffff;
+    margin: 5% 10% 5% 0;
+    padding: 2%;
+    border: solid 1px #000000;
+}
+.reserve_right p{
+    text-align: center;
+    font-weight: bold;
+    margin: 2vmin 0 5vmin 0;
+    color: #B88729;
+}
+.finish_thanks{
+    width: 100%;
+    height: 30vh;
+    margin-top: -5vh;
+    background-color: #A6936E;
+}
+.finish_thanks h2{
+    text-align: center;
+    font-size: 5vw;
+    padding-top: 20vmin;
+}
+.finish_backhome{
+    text-align: center;
+    margin: -15% 0 0 0;
+    font-weight: bold;
+}
+.finish_backhome a:hover{
+    color: rgb(3, 118, 153);
+}
+
+/*-------------------blog-------------------*/
+.blog_back{
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url('image/cofee_cut.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.blog_header_title:before{
+    content: "";
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+}
+.blog_flex_container{
+    width: 90%;
+    margin-left: 10%;
+    margin-right: 5%;
+    display: flex;
+    /*margin-top: 10%;*/
+}
+.blog_left_bar{
+    width: 10%;
+    height: 40vh;
+    position: fixed;
+    left: 0;
+    top: 10%;
+    padding: 1%;
+    border-right: dashed 2px #ffffff;
+}
+.blog_nav{
+    width: 90%
+}
+.blog_nav_btn{
+    display: flex;
+    width: 10%;
+    border-left: dashed 2px #362607;
+    justify-content: center;
+}
+.blog_nav h2{
+    text-align: center;
+    font-size: 3vw;
+    margin: 5% 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+}
+.pickup_list{
+    display: flex;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+}
+.pickup_list li{
+    width: 30%;
+    margin: 0 1%;
+    padding: 1%;
+    border: solid 1px #362607;
+}
+.pickup_list img{
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+.blog_container{
+    flex-wrap: wrap;
+    margin: 3%;
+}
+.blog_article{
+    width: 32%;
+    height: 50vh;
+    border: solid 1px #362607;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1%;
+    margin: 1% auto;
+}
+.blog_article{
+    opacity: 0;
+}
+.blog_article a{
+    width: 100%;
+    background-color: #000000;
+}
+.blog_thumbnail{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.blog_thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*--スマホ用--*/
+.linetext_cap{
+    width: 90%;
+    height: 90%;
+    border: solid 1px #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    margin: 5%;
+    padding: 2%;
+}
+.blog_thumbnail_small{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 1%;
+}
+.blog_thumbnail_small span{
+    margin: 0 auto 5% auto;
+}
+.blog_thumbnail_small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 80%;
+}
+/*-----*/
+.blog_detail{
+    text-align: right;
+}
+.blog_thumbnail_text{
+    /*width: 15vw;*/
+    width: 95%;
+    margin: 0 auto;
+}
+.blog_thumbnail_title{
+    margin: 10px 0px;
+    font-weight: bold;
+}
+.blog_thumbnail_explain{
+    margin: 10px 0px;
+    font-size: 1vw;
+}
+.blog_explain{
+    overflow-wrap: break-word;
+}
+.edit_button{
+    width: 110px;
+    display: flex;
+    margin-left: auto;
+}
+.article_container h2{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+.article_image{
+    max-width: 70%;
+    max-height: 40vh;
+    object-fit: cover;
+    float: right;
+    padding: 0 0 2% 2%;
+}
+.article_text{
+    margin-top: 5%;
+    list-style: none;
+}
+.article_link{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.article_link li{
+    margin: 0px 20px;
+    margin-bottom: 50px;
+}
+
+/*----------------room--------------------*/
+.rooms_back{
+    background-color: #A6936E;
+    width: 100%;
+    height: 100%;
+}
+.room_container{
+    justify-content: center;
+    margin: 10% 0 20% 0;
+}
+.room_left_bar{
+    height: 40vh;
+    position: fixed;
+    left: 0;
+    top: 10%;
+    padding: 1%;
+    border-right: dashed 2px #ffffff;
+    margin-top: 7vh;
+}
+/*.room_main{
+    margin: 7vh 0 15% 5%;
+}*/
+.room_box{
+    display: flex;
+    border: solid 1px #362607;
+    margin: 0 auto 20px auto;
+    font-size: 1vw;
+    background-color: #FFF7E9;
+}
+.room_explain h2{
+    font-size: 2vw;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+    margin: 1vh 0;
+}
+.room_message{
+    font-size: 1vw;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+    margin: 3vmin;
+}
+.room_explain ul{
+    border: dotted 1px #362607;
+    margin: 2vmin;
+}
+.room_explain li{
+    font-size: 1vw;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+}
+.room_image{
+    width: 40%;
+    margin: 0 0 0 auto;
+}
+.room_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.change_image_button{
+    margin-top: 5px;
+    text-align: center;
+}
+
+/*-------------------SNS-------------------*/
+.post_back{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #A6936E;
+    /*background-image: url('image/sky.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;*/
+}
+.sns_container{
+    color: #000000;
+}
+.posts_left{
+    position: fixed;
+    width: 13%;
+    height: 40vh;
+    margin-right: 2%;
+    border-right: dashed 2px #ffffff;
+    padding-right: 2vw;
+    z-index: 3;
+}
+.all_posts{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 15vw;
+    margin: 0 0 20% 0;
+}
+.all_posts a{
+    margin: 0 1vmin 0 0;
+}
+.post_box{
+    width: 40vmin;
+    height: 40vmin;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid 1px #000000;
+    margin-bottom: 1vmin;
+}
+.post_title{
+    text-align: center;
+    font-size: 40px;
+    padding: 50px 0px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+}
+.center_area{
+    display: flex;
+    margin-left: 30px;
+    /*background-color: #ffffff;*/
+    width: 100%;
+    flex-wrap: wrap;
+}
+.post_thumbnail{
+    width: 100%;
+    height: 77%;
+}
+.post_thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post_name{
+    display: flex;
+    width: 95%;
+    margin: 5px auto;
+    height: 20%;
+}
+.post_name p{
+    line-height: 50px;
+    padding-left: 5px;
+}
+.post_name img{
+    width: 7vmin;
+    height: 7vmin;
+    border-radius: 50%;
+}
+.post_icon{
+    margin: auto 0;
+}
+.sns_title{
+    margin: 5vh 0;
+    padding: 0 0 1vh 0;
+    border-bottom: dashed 1px #362607;
+}
+.sns_text{
+    margin: 0 0 5vh 0;
+}
+.sns_image{
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+}
+.sns_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sns_form{
+    width: 800px;
+    height: 50px;
+    border: solid 1px #000000;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.sns_textarea{
+    resize: none;
+    height: 400px;
+}
+.like_button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vmin;
+    height: 5vmin;
+}
+.like_button a{
+    cursor: pointer;
+    width: 5vmin;
+    font-size: 4vmin;
+    color: #B88729;
+}
+
+/*------マイページ---------*/
+.mypage_back{
+    width: 100%;
+    height: 100%;
+    background-color: #A6936E;
+}
+.mypage_user{
+    display: flex;
+    width: 80%;
+    height: 70vmin;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    margin-top: 5vh;
+}
+.mypage_profile{
+    flex-grow: 1;
+    padding-bottom: 10vh;
+}
+.mypage_icon{
+    width: 30vmin;
+    margin: 0 auto;
+}
+.mypage_icon img{
+    width: 30vmin;
+    height: 30vmin;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: solid 1px #362607;
+    margin-top: 50%;
+}
+.profile_text{
+    width: 60vmin;
+    margin: 5vh auto 10vh auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+}
+.user_edit_link{
+    width: 10%;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10vh 10% 0 0;
+}
+.user_link_change{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 7vh;
+    background-color: #B88729;
+    color: #000000;
+    padding: 1.3vh 2% 0 2%;
+    transition: ease .2s;
+}
+.user_link_change span{
+    position: relative;
+    margin: 0 auto;
+    z-index: 3;
+    font-size: 1vw;
+}
+.user_link_change:hover span{
+    color: #000000;
+}
+.user_edit_link li{
+    height: 10vh;
+    margin: 5vh 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid 1px #000000;
+    padding: 3vh;
+    text-align: center;
+    color: #ffffff;
+}
+.mypage_tab{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*margin-top: -10vh;*/
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+.mypage_tab li{
+    width: 20vw;
+}
+.mypage_tab li a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #ddd;
+}
+.mypage_tab li.active a{
+    background-color: #f1fd43;
+}
+.mypage_container{
+    width: 80%;
+    margin: 0 auto;
+    border-top: solid 1px #f1fd43;
+}
+.mypage_split{
+    display: none;
+    opacity: 0;
+    background-color: #ffffff;
+    padding: 5%;
+}
+.mypage_split.is-active{
+    display: block;
+    animation-name: displayAnime;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.mypage_table_title{
+    text-align: center;
+}
+.mypage_table{
+    width: 90%;
+    border: solid 1px #000000;
+    border-bottom: #ffffff;
+    background-color: #ffffff;
+    padding: 50px;
+    margin: 0 auto;
+}
+.mypage_table tr{
+    text-align: center;
+    border-bottom: solid 0.5px #000000;
+}
+.user_image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #FFF7E9;
+}
+/*.mypage_posts{
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: solid 1px #000000;
+}*/
+.mypage_all_posts{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.mypage_post_thumbnail{
+    width: 35vmin;
+    height: 35vmin;
+    border: solid 1px #000000;
+    margin: 0.5vmin;
+}
+.mypage_post_thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mypage_post_title{
+    padding: 30px;
+    text-align: center;
+}
+.mypage_post_text{
+    padding: 20px;
+}
+.user_post_image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.edit_mypage{
+    text-align: center;
+    font-size: 4vmin;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+    padding: 0 0 5vh 0;
+}
+.mypage_image_change{
+    width: 50vmin;
+    height: 30vmin;
+    margin: 0 auto 5vh auto;
+}
+.mypage_image_change p{
+    text-align: center;
+}
+.mypage_image_change img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+.mypage_image_change div{
+    width: 100%;
+    height: 90%;
+    border: solid 1px #362607;
+}
+

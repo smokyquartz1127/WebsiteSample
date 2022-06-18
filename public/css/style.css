@@ -1,0 +1,453 @@
+body{
+    width: 100%;
+    overflow-y: scroll;
+}
+.not_scrollbar{
+    -ms-over-style: none;
+    scrollbar-width: none;
+}
+.not_scrollbar::-webkit-scrollbar{
+    display: none;
+}
+/*.background_whole{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('image/forest.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+main{
+    flex-grow: 1;
+}
+/*--------------------共通--------------------------*/
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+.scroll_marker{
+    width: 15vw;
+    z-index: -1;
+    margin: -15vh auto 3vh auto;
+}
+.scroll_marker img{
+    width: 100%;
+    opacity: 0.9;
+}
+.main_content{
+    width: 100vw;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.main_background{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.box{
+    width: 100%;
+    /*height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    width: 90%;
+    margin: 0 auto;
+}
+.main_content .board:first-child{
+    padding-top: 5vh;
+}
+.cutline{
+    font-weight: bold;
+    margin: 10vh 0;
+    text-align: center;
+}
+.flex_container{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 5vh;
+}
+.text_center{
+    text-align: center;
+    font-size: 1vw;
+}
+.main_title{
+    width: 90%;
+    margin: 40px auto 0 auto;
+    border-bottom: solid 2px #000000;
+    text-align: center;
+    font-family: 'IM Fell English SC', serif;
+    color: #000000;
+    font-size: 2vw;
+}
+.title_color_change{
+    width: 80%;
+    color: #FFF7E9;
+    border-bottom: solid 1px #FFF7E9;
+}
+.area_title{
+    font-size: 2vw;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+    text-align: center;
+    margin: 3% 0 2% 0;
+}
+.area_intro{
+    text-align: center;
+    margin: 5vh 0;
+    font-size: 1.2vw;
+}
+.image_default{
+    width: 700px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.image_default img{
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+}
+.detail_link{
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 15px;
+    border: solid 1px #80808052;
+    border-radius: 10px;
+    text-align: center;
+}
+.submit{
+    border: solid 1px #000000;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.small_people{
+    width: 70vw;
+    margin: 5vh auto 0 auto;
+}
+.small_people img{
+    width: 100%;
+}
+.detail{
+    width: 80%;
+    position: relative;
+    background-color: #ffffff;
+    margin: 5% auto 20% auto;
+    padding: 5%;
+    border: solid 1px #000000;
+}
+.form-control{
+    width: 70%;
+}
+/*-----------------ヘッダー------------------*/
+header{
+    width: 100vw;
+    height: 5vh;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.top_area{
+    width: 100vw;
+    /*position: fixed;*/
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+}
+.logo{
+    height: 40px;
+    margin-left: 10px;
+}
+.link{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+.link p{
+    font-weight: bold;
+}
+.link li{
+    margin: auto 0;
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 1.2vw;
+}
+.link li:last-child{
+    margin-right: 5vw;
+}
+.dropdown-menu{
+    width: 100%;
+    position: absolute;
+}
+.dropdown-menu li{
+    color: #000000;
+}
+
+/*---------------メイン-------------------------*/
+.welcome{
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    display: table-cell;
+    /*vertical-align: middle;*/
+    text-align: center;
+}
+.welcome_text{
+   display: inline-block;
+   margin-top: 30vh;
+}
+.welcome_text h1,
+.welcome_text p{
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+.welcome_text p{
+    font-size: 3vw;
+    margin: 5px 0;
+}
+.container_link{
+    width: 100vw;
+    height: 100vh;
+    padding: 25vh 0 0 0;
+    background-color: rgba(100, 70, 48, 0.5);
+}
+.concept_title{
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+    padding-right: 50px;
+}
+.concept_explain_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+}
+.concept_explain{
+    font-size: 1vw;
+    text-align: center;
+    margin: 2vh 3vw 0 3vw;
+}
+.bird_space{
+    height: 60vh;
+    padding: 20px;
+    border: solid 1px #80808052;
+}
+.bird_space_first{
+    margin-bottom: 5vh;
+}
+.bird_explain{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1vw;
+    overflow-wrap: break-word;
+}
+.bird_image{
+    width: 70%;
+    height: 45%;
+    margin: 0 auto;
+}
+.bird_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card_slider{
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 0 3%;
+}
+.slick-list{
+    margin: 0;
+}
+.thumbnail{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*.show{
+    width: 20vw;
+    height: 30vh;
+    margin: 0 auto;
+}*/
+.show_image{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+.image_meal{
+    width: 200px;
+}
+.blog_slider{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0 3%;
+}
+.top_blog_space{
+    height: 60vh;
+    padding: 20px;
+    border: solid 1px #80808052;
+}
+.top_blog_date{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.top_blog_image{
+    width: 70%;
+    height: 30%;
+    margin: 0 auto;
+}
+.top_blog_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.top_blog_info{
+    margin: auto;
+    padding: 0 30px;
+}
+.top_blog_title{
+    font-size: 1vw;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.top_blog_text{
+    margin-top: 1vw;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+.map_image{
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+}
+.map_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*-----------------------モーダルの内容-------------------------*/
+#modal{
+    display: none;
+}
+#modal_second_meal{
+    display: none;
+}
+#modal_third_meal{
+    display: none;
+}
+#modal_fourth_meal{
+    display: none;
+}
+#modal_fifth_meal{
+    display: none;
+}
+.modal_content{
+    margin: auto;
+    text-align: center;
+}
+.modal_content img{
+    height: 90%;
+    max-width: 90%;
+    object-fit: cover;
+}
+.modal_content p{
+    margin: 30px 0px;
+}
+.share_button{
+    border: solid 1px #80808052;
+    font-size: 16px;
+    padding: 5px;
+}
+.share_button span{
+    font-size: 16px;
+}
+.modaal-container{
+    width: 50%;
+}
+
+
+/*----------------------フッター----------------------------*/
+.footer_link_area{
+    padding: 20px;
+}
+.footer_link{
+    margin-right: 60px;
+}
+.footer_link h2{
+    color: #FFF7E9;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer_link li{
+    margin-bottom: 5px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1vw;
+}
+.footer_link li:last-child{
+    margin-bottom: 0px;
+}
+.footer_link_small{
+    margin: 2vh 0 10vh 0;
+}
+.footer_link_small h2{
+    margin-bottom: 1vw;
+    text-align: center;
+}
+.footer_link_small li{
+    margin-bottom: 1vw;
+    text-align: center;
+    font-size: 1vw;
+}
+.footer_link_small li:last-child{
+    margin-bottom: 0px;
+}
+.footer_area{
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    border-top: solid 1px #80808052;
+    text-align: center;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+
+
+
