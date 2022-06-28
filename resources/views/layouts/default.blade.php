@@ -26,8 +26,8 @@
 
 <body>
     <div class="wrapper">
-        <div id="splash">
-            <div id="splash_logo">
+        <div id="opening" class="splash">
+            <div id="opening_logo" class="splash_logo">
                 <p class="fade_up">&#9888;This is a Sample Site&#9888;</p>
             </div>
         </div>

@@ -7,8 +7,10 @@ $(function(){
 $(window).on('load', function(){
     var path = location.pathname;
     if(path === "/"){
-        $('#splash').delay(1500).fadeOut('slow');
-        $('#splash_logo').delay(1200).fadeOut('slow');
+        $('#opening').addClass('splash');
+        $('#opening_logo').addClass('splash_logo');
+        $('.splash').delay(1500).fadeOut('slow');
+        $('.splash_logo').delay(1200).fadeOut('slow');
     }
 });
 
