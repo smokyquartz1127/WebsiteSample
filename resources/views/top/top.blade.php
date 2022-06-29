@@ -1,6 +1,11 @@
 @extends('layouts.not_logged_in')
 
 @section('main')
+<div id="opening" class="splash">
+    <div id="opening_logo" class="splash_logo">
+        <p class="fade_up">&#9888;This is a Sample Site&#9888;</p>
+    </div>
+</div>
     <div class="welcome">
         <div class="welcome_text">
             <p>Welcome to</p>
