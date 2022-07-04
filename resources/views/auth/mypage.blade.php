@@ -17,6 +17,7 @@
             <div class="row">
                 <div class="d-lg-block d-none">
                     <ul class="user_edit_link">
+                        <p>///プロフィール設定///</p>
                         <a href="{{ route('user.edit', $user->id) }}">
                             <li class="user_link_change bgleft"><span>profile</span></li>
                         </a>
@@ -24,7 +25,7 @@
                             <li class="user_link_change bgleft"><span>icon</span></li>
                         </a>
                         <a href="{{ route('user.background_edit', $user->id) }}">
-                            <li class="user_link_change bgleft"><span>background</span></li>
+                            <li class="user_link_change bgleft"><span>home image</span></li>
                         </a>
                     </ul>
                 </div>
@@ -59,15 +60,10 @@
                             @else
                                 <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                             @endif
-
-                        <!--div class="blog_thumbnail_text">
-                            <h2 class="blog_thumbnail_title">{{ Str::limit($post->title, 20) }}</h2>
-                            <p class="blog_thumbnail_explain">{{ Str::limit($post->text, 50) }}</p>
-                        </div-->
                     </div>
                 </a>
                 @empty
-                    <li>まだ投稿はありません。</li>
+                    <p class="register_empty">まだ投稿はありません。</p>
                 @endforelse
             </div>
         </div>
@@ -93,14 +89,10 @@
                             <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                         @endif
                     </div>
-                    <!--div class="blog_thumbnail_text">
-                        <h2 class="blog_thumbnail_title">{{ Str::limit($post->title, 20) }}</h2>
-                        <p class="blog_thumbnail_explain">{{ Str::limit($post->text, 50) }}</p>
-                    </div-->
                 </div>
             </a>
             @empty
-                <p>ここではいいねした投稿が見ることができます。</p>
+                <p class="register_empty">ここではいいねした投稿が見ることができます。</p>
             @endforelse
         </div>
         <div id="info" class="mypage_split">

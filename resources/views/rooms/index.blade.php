@@ -9,7 +9,7 @@
             <p>現在、泊まれるお部屋はありません。</p>
         @endforelse
     </ul>
-    <div class="room_main col-12 col-md-8">
+    <div class="col-12 col-md-8">
         @forelse($rooms as $room)
             <div class="room_box" id="{{ $room->id }}">
                 <div class="room_explain">

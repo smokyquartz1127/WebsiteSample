@@ -2,11 +2,12 @@
 /*------ローディング------*/
 .splash{
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 10000;
     background-color: #B88729;
     text-align: center;
+    margin-top: -5vh;
 }
 .splash_logo{
     position: absolute;
@@ -15,7 +16,8 @@
     transform: translate(-50%, -50%);
 }
 .splash p{
-    width: 260px;
+    width: 70vw;
+    font-size: 5vmin;
 }
 
 
@@ -421,10 +423,11 @@
 .slide_btn{
     position: relative;
     width: 100%;
-    line-height: 5vh;
+    line-height: 7vh;
     padding: 1%;
     text-align: center;
     color: #362607;
+    font-size: 3vmin;
     font-weight: bold;
     text-decoration: none;
     outline: none;

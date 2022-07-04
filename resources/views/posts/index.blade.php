@@ -2,13 +2,10 @@
 
 @section('main')
     <div class="d-none d-lg-block">
-        <p class="post_title">旅人より</p>
+        <p class="post_title">宿泊された方からのメッセージ</p>
     </div>
     <div class="row sns_container">
-        <div class="posts_left d-none d-lg-block col-lg-2">
-            <a href="{{ route('posts.create') }}" class="btnchange bgleft"><span>ひとこと書く</span></a>
-        </div>
-        <div class="all_posts col-11 col-md-12">
+        <div class="all_posts col-12">
             @forelse($posts as $post)
                 <a href="{{ route('posts.show', $post->id) }}" >
                     <div class="post_box">
@@ -30,15 +27,15 @@
                                 <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                             @endif
                         </div>
-                        <!--div class="blog_thumbnail_text">
-                            <h2 class="blog_thumbnail_title">{{ Str::limit($post->title, 20) }}</h2>
-                            <p class="blog_thumbnail_explain">{{ Str::limit($post->text, 30) }}</p>
-                        </div-->
+
                     </div>
                 </a>
             @empty
                 <p>投稿はありません。</p>
             @endforelse
+        </div>
+        <div class="posts_button d-none d-lg-block col-lg-2">
+            <a href="{{ route('posts.create') }}" class="btnchange bgleft"><span>ひとこと書く</span></a>
         </div>
     </div>
 @endsection

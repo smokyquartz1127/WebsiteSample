@@ -1,7 +1,9 @@
 @extends('layouts.not_logged_in')
 
 @section('main')
-    @if ($errors->any())
+    <form method="POST" action="{{ route('login') }}" class="detail">
+        @csrf
+        @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -9,9 +11,7 @@
                 @endforeach
             </ul>
         </div>
-    @endif
-    <form method="POST" action="{{ route('login') }}" class="detail">
-        @csrf
+        @endif
         <div class="form-group form-row">
             <label class="col-md-3 col-form-label text-md-right" for="youremail">メールアドレス: </label>
             <div class="col-md-9">

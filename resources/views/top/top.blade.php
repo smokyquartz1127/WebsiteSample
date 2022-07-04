@@ -276,15 +276,15 @@
             <!---LINK--->
             <div class="board">
                 <h2 class="main_title">LINK</h2>
-                <div class="row">
+                <div class="row footer_link_area col-md-6">
                     <ul class="footer_link_small col-4 order-sm-1">
                         <h2>Return</h2>
-                        <li><a href="{{ route('top') }}">Top</a></li>
+                        <li><a href="{{ route('top') }}">ページトップ</a></li>
                         <li><a href="#GALLERY">ABOUT</a></li>
-                        <li><a href="#CONCEPT">Concept</a></li>
-                        <li><a href="#ACTION">Action</a></li>
-                        <li><a href="#BLOG">Blogs</a></li>
-                        <li><a href="#ACCESS">アクセス</a></li>
+                        <li><a href="#CONCEPT">CONCEPT</a></li>
+                        <li><a href="#ACTION">ACTION</a></li>
+                        <li><a href="#BLOG">BLOG</a></li>
+                        <li><a href="#ACCESS">ACCESS</a></li>
                     </ul>
                     <ul class="footer_link_small col-4 order-sm-2">
                         <h2>Reading</h2>

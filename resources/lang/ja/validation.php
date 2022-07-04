@@ -150,6 +150,10 @@ return [
         'number' => '人数',
         'start' => '入所日',
         'end' => '退所日',
+        'email' => 'メールアドレス',
+        'icon_image' => 'アイコン画像',
+        'background_image' => '背景画像',
+        'password' => 'パスワード',
     ],
 
 ];

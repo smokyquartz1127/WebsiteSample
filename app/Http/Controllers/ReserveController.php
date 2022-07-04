@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Room;
+use App\Reserve;
 use App\Http\Requests\ReserveRequest;
 
 class ReserveController extends Controller

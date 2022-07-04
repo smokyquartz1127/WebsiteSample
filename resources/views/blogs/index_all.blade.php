@@ -3,13 +3,13 @@
 @section('main')
     <div class="row">
         <div class="blog_flex_container d-none d-lg-block">
-            <ul class="blog_left_bar d-none d-lg-block">
-                <li><a class="slide_btn borderleft"><span>btn01</span></a></li>
-                <li><a class="slide_btn borderleft"><span>btn02</span></a></li>
-                <li><a class="slide_btn borderleft"><span>btn03</span></a></li>
-                <li><a class="slide_btn borderleft"><span>btn04</span></a></li>
-                <li><a class="slide_btn borderleft"><span>btn05</span></a></li>
-            </ul>
+            <div class="blog_left_bar d-none d-lg-block">
+                <button class="slide_btn borderleft"><span>btn01</span></button>
+                <button class="slide_btn borderleft"><span>btn02</span></button>
+                <button class="slide_btn borderleft"><span>btn03</span></button>
+                <button class="slide_btn borderleft"><span>btn04</span></button>
+                <button class="slide_btn borderleft"><span>btn05</span></button>
+            </div>
             <div class="row blog_container col-12 delay_scroll">
                 @forelse($blogs as $blog)
                     <div class="blog_article lineText d-flex justify-content-between order-md-{{ $blogs_count - $blog->id }}">

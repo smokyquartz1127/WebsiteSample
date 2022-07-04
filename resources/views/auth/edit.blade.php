@@ -1,19 +1,18 @@
 @extends('layouts.logged_in')
 
 @section('main')
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-
     <form method="POST" action="{{ route('user.update', $user->id) }}" class="detail">
         @csrf
         @method('patch')
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <p class="edit_mypage">プロフィール情報編集</p>
         <div class="form-group form-row">
             <label class="col-md-3 col-form-label text-md-right" for="yourname">ユーザー名: </label>

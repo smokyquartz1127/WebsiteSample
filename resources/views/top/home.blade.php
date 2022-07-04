@@ -8,9 +8,6 @@
             <p>A fantasy hotel in the forest.</p>
         </div>
     </div>
-    <!--div class="scroll_marker">
-            <img src="{ asset('css/image/scroll_marker.png') }}">
-        </div-->
     <div class="main_content">
         <div class="main_background">
             <!---施設案内--->
@@ -171,9 +168,6 @@
                         <img src="{{ asset('css/image/small_people.jpg') }}">
                     </div>
                 </div>
-                <!--div>
-                            <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                        </div-->
             </div>
 
             <p class="cutline">----------</p>
@@ -240,9 +234,6 @@
                                 <div class="top_blog_info">
                                     <p class="top_blog_title">{{ Str::limit($blog->title, 50) }}</p>
                                     <p class="top_blog_text">{{ Str::limit($blog->first_paragraph, 50) }}</p>
-                                    <!--div class="detail_link_box">
-                                        <p class="detail_link">Read More &#62</p>
-                                    </div-->
                                 </div>
                             </div>
                         </a>
@@ -271,15 +262,15 @@
             <!---LINK--->
             <div class="board">
                 <h2 class="main_title">LINK</h2>
-                <div class="row">
+                <div class="row footer_link_area col-md-6">
                     <ul class="footer_link_small col-4 order-sm-1">
                         <h2>Return</h2>
-                        <li><a href="{{ route('top') }}">Top</a></li>
+                        <li><a href="{{ route('top') }}">ページトップ</a></li>
                         <li><a href="#GALLERY">ABOUT</a></li>
-                        <li><a href="#CONCEPT">Concept</a></li>
-                        <li><a href="#ACTION">Action</a></li>
-                        <li><a href="#BLOG">Blogs</a></li>
-                        <li><a href="#ACCESS">アクセス</a></li>
+                        <li><a href="#CONCEPT">CONCEPT</a></li>
+                        <li><a href="#ACTION">ACTION</a></li>
+                        <li><a href="#BLOG">BLOG</a></li>
+                        <li><a href="#ACCESS">ACCESS</a></li>
                     </ul>
                     <ul class="footer_link_small col-4 order-sm-2">
                         <h2>Reading</h2>

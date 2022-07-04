@@ -29,6 +29,7 @@ $(function () {
     } else if (path === "/mypage") {
         $('body').addClass("mypage_back")
     } else if (path === "/blogs_all" || path === "/blogs") {
+        $('.wrapper').addClass("blog_back_cover")
         $('body').addClass("blog_back")
     } else if (path === "/rooms" || path === "/rooms_all") {
         $('body').addClass("rooms_back")
@@ -231,19 +232,19 @@ $('.show_fifth').modaal({
 });
 
 $('#confirm').on('click', () => {
-    alert('シェアしました♪');
+    alert('シェアしました！');
     $('.show').modaal('close')
 });
 $('#confirm_second').on('click', () => {
-    alert('シェアしました♪');
+    alert('シェアしました！');
     $('.show_second').modaal('close')
 });
 $('#confirm_third').on('click', () => {
-    alert('シェアしました♪');
+    alert('シェアしました！');
     $('.show_third').modaal('close')
 });
 $('#confirm_fourth').on('click', () => {
-    alert('シェアしました♪');
+    alert('シェアしました！');
     $('.show_fourth').modaal('close')
 });
 

@@ -23,7 +23,7 @@
     justify-content: space-between;
 }
 .flex_reserve h2{
-    font-size: 3vmin;
+    font-size: 4vmin;
     text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
     font-family: 'IM Fell English SC', serif;
@@ -51,6 +51,7 @@
     border: solid 1px #000000;
 }
 .reserve_right p{
+    font-size: 2vw;
     text-align: center;
     font-weight: bold;
     margin: 2vmin 0 5vmin 0;
@@ -59,12 +60,12 @@
 .finish_thanks{
     width: 100%;
     height: 30vh;
-    margin-top: -5vh;
+    margin: -5vh 0;
     background-color: #A6936E;
 }
 .finish_thanks h2{
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vmin;
     padding-top: 20vmin;
 }
 .finish_backhome{
@@ -73,7 +74,7 @@
     font-weight: bold;
 }
 .finish_backhome a:hover{
-    color: rgb(3, 118, 153);
+    color: #f1fd43;
 }
 
 /*-------------------blog-------------------*/
@@ -85,6 +86,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+}
+.blog_back_cover{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    min-height: 100vh;
     background-attachment: fixed;
 }
 .blog_header_title:before{
@@ -106,7 +113,7 @@
 }
 .blog_left_bar{
     width: 10%;
-    height: 40vh;
+    height: 50vh;
     position: fixed;
     left: 0;
     top: 10%;
@@ -249,6 +256,7 @@
     display: flex;
     list-style: none;
     justify-content: center;
+    margin-top: -18%;
 }
 .article_link li{
     margin: 0px 20px;
@@ -284,6 +292,9 @@
     font-size: 1vw;
     background-color: #FFF7E9;
 }
+.room_explain{
+    width: 70%;
+}
 .room_explain h2{
     font-size: 2vw;
     text-align: center;
@@ -301,8 +312,9 @@
     margin: 3vmin;
 }
 .room_explain ul{
+    width: 60vmin;
     border: dotted 1px #362607;
-    margin: 2vmin;
+    margin: 2vmin auto;
 }
 .room_explain li{
     font-size: 1vw;
@@ -311,7 +323,7 @@
     font-family: 'Kiwi Maru', serif;
 }
 .room_image{
-    width: 40%;
+    width: 30%;
     margin: 0 0 0 auto;
 }
 .room_image img{
@@ -330,11 +342,6 @@
     height: 100vh;
     margin: 0 auto;
     background-color: #A6936E;
-    /*background-image: url('image/sky.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;*/
 }
 .sns_container{
     color: #000000;
@@ -348,10 +355,18 @@
     padding-right: 2vw;
     z-index: 3;
 }
+.posts_button{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 10vw;
+    border-radius: 50%;
+    padding: 0 1vmin 5vh 0;
+}
 .all_posts{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 0 15vw;
+    padding: 0 0 0 7vmin;
     margin: 0 0 20% 0;
 }
 .all_posts a{
@@ -363,6 +378,11 @@
     background-color: rgba(255, 255, 255, 0.9);
     border: solid 1px #000000;
     margin-bottom: 1vmin;
+}
+.post_box_star{
+    width: 2vmin;
+    height: 2vmin;
+    margin-left: auto;
 }
 .post_title{
     text-align: center;
@@ -424,8 +444,12 @@
     height: 100%;
     object-fit: cover;
 }
+.post_form{
+    margin: 0 auto;
+    width: 70vw;
+}
 .sns_form{
-    width: 800px;
+    width: 100%;
     height: 50px;
     border: solid 1px #000000;
     margin-bottom: 20px;
@@ -433,7 +457,7 @@
 }
 .sns_textarea{
     resize: none;
-    height: 400px;
+    height: 40vh;
 }
 .like_button{
     position: absolute;
@@ -498,6 +522,13 @@
     right: 0;
     top: 0;
     margin: 10vh 10% 0 0;
+    padding-left: 1vmin;
+    border-left: dashed 1px #362607;
+}
+.user_edit_link p{
+    text-align: center;
+    padding-top: 4vmin;
+    font-size: 1.5vmin;
 }
 .user_link_change{
     position: relative;
@@ -588,16 +619,8 @@
     object-fit: cover;
     background-color: #FFF7E9;
 }
-/*.mypage_posts{
-    display: flex;
-    width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #ffffff;
-    border: solid 1px #000000;
-}*/
 .mypage_all_posts{
+    width: 108vmin;
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -651,4 +674,6 @@
     height: 90%;
     border: solid 1px #362607;
 }
-
+.register_empty{
+    text-align: center;
+}

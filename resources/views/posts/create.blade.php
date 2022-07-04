@@ -1,9 +1,8 @@
 @extends('layouts.default')
 
 @section('main')
-<a href="{{ route('posts.index') }}">←戻る</a>
 <div class="detail">
-    <form method="post" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+    <form method="post" class="post_form" action="{{ route('posts.store') }}" enctype="multipart/form-data">
         @csrf
         <div>
             <input type="text" class="sns_form" name="title" placeholder="タイトル">
@@ -15,7 +14,7 @@
             <input type="file" name="image">
         </div>
         <div>
-            <input class="submit" type="submit" value="投稿">
+            <input class="btn btn-primary submit" type="submit" value="投稿">
         </div>
     </form>
 </div>

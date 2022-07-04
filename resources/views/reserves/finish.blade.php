@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="finish_thanks">
-        <h2>Thank you!</h2>
+        <h2>ご予約ありがとうございます！</h2>
     </div>
     <div class="container detail">
         <div class="form_item">
