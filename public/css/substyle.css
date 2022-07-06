@@ -677,3 +677,46 @@
 .register_empty{
     text-align: center;
 }
+
+/*管理者ページ*/
+.admin_home h2{
+    height: 20vh;
+    color: #362607;
+    font-size: 5vmin;
+    padding-top: 5vmin;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Kiwi Maru', serif;
+}
+.admin_home li{
+    text-align: center;
+}
+.admin_blog_article{
+    width: 32%;
+    height: 50vh;
+    border: solid 1px #362607;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1%;
+    margin: 1% auto;
+}
+.admin_edit{
+    display: flex;
+}
+.admin_edit_button{
+    width: 10vw;
+    margin: 1vmin;
+}
+.admin_cap{
+    width: 80%;
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    left: 10%;
+    color: #ffffff;
+}
+.room_image p{
+    margin: -10vh 0 0 0;
+    color: #ffffff;
+    font-weight: bold;
+}

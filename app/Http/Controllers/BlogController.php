@@ -92,9 +92,13 @@ class BlogController extends Controller
     public function adminindex()
     {
         $blogs = Blog::latest('created_at')->get();
+        $pickups = Blog::inRandomOrder()->take(3)->get();
+        $blogs_count = $blogs->count();
         return view('blogs.index_admin', [
             'title' => '管理者ページ',
             'blogs' => $blogs,
+            'pickups' => $pickups,
+            'blogs_count' => $blogs_count + 1,
         ]);
     }
 

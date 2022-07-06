@@ -1,8 +1,7 @@
 @extends('layouts.admini')
 
 @section('main')
-<p>ここは管理者ページです。</p>
-<div>
+<div class="detail admin_home">
     <h2>管理者メニュー</h2>
     <ul>
         <li><a href="{{ route('adminblog') }}">ブログ編集</a></li>
