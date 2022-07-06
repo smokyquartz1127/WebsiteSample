@@ -4,6 +4,7 @@
     <div class="row">
         <div class="blog_flex_container d-none d-lg-block">
             <div class="blog_left_bar d-none d-lg-block">
+                <p><a href="{{ route('blogs.create') }}">＞新規部屋登録</a></p>
                 <button class="slide_btn borderleft"><span>btn01</span></button>
                 <button class="slide_btn borderleft"><span>btn02</span></button>
                 <button class="slide_btn borderleft"><span>btn03</span></button>
