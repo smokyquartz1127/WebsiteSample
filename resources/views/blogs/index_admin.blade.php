@@ -29,10 +29,11 @@
                                 </a>
                                 <div class="admin_edit">
                                     <a href="{{ route('blogs.edit', $blog->id) }}" class="admin_edit_button btn btn-secondary">編集</a>
+                                    <a href="{{ route('blogs.editimage', $blog->id) }}" class="admin_edit_button btn btn-secondary">画像編集</a>
                                     <form method="POST" action="{{ route('blogs.destroy', $blog->id) }}">
                                         @csrf
                                         @method('delete')
-                                        <input value="削除" class="btn btn-warning admin_edit_button">
+                                        <input type="submit" value="削除" class="btn btn-warning admin_edit_button">
                                     </form>
                                 </div>
                             </span>

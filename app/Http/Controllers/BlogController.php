@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\Http\Requests\BlogRequest;
+use App\Http\Requests\ImageRequest;
 use App\Services\FileUploadService;
 
 class BlogController extends Controller
@@ -80,8 +81,6 @@ class BlogController extends Controller
     }
 
     //---------------ここから管理者のみ--------------------
-
-
     //----------------------管理者ページ-----------------------
     public function admin_home()
     {
@@ -161,6 +160,28 @@ class BlogController extends Controller
             'title', 'first_paragraph', 'second_paragraph', 'third_paragraph'
         ]));
         session()->flash('success', '更新しました！');
+        return redirect()->route('adminblog');
+    }
+
+    public function editImage($id)
+    {
+        $blog = Blog::find($id);
+        return view('blogs.edit_image', [
+            'blog' => $blog,
+        ]);
+    }
+
+    public function updateImage(FileUploadService $service, ImageRequest $request, $id)
+    {
+        $path = $service->saveImage($request->file('image'));
+        $blog = Blog::find($id);
+        if($blog->image !== ''){
+            \Storage::disk('public')->delete(\Storage::url($blog->image));
+        }
+
+        $blog->update([
+            'image' => $path,
+        ]);
         return redirect()->route('adminblog');
     }
 

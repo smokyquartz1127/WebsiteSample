@@ -43,6 +43,8 @@ Route::get('/blogs_all', 'BlogController@index_all')->name('blogs.index_all');
 Route::get('/blogs_all_show/{blog}', 'BlogController@show_all')->name('blogs.show_all');
 Route::get('/adminindex', 'BlogController@adminindex')->name('adminblog');
 Route::get('/adminshow/{blog}', 'BlogController@adminshow')->name('adminblogshow');
+Route::get('/blogs/{blog}/blog_editimage', 'BlogController@editImage')->name('blogs.editimage');
+Route::patch('/blogs/{blog}/blog_editimage', 'BlogController@updateImage')->name('blogs.updateimage');
 
 //------------------SNS---------------------------
 Route::resource('posts', 'PostController');
