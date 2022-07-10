@@ -16,7 +16,7 @@
     <div class="main_content">
         <div class="main_background">
             <!---施設案内--->
-            <div class="board">
+            <div class="board" id="ABOUT">
                 <h2 class="main_title">ABOUT</h2>
                 <p class="area_title">森と、ともに暮らす</p>
                 <p class="area_intro">ようこそ、私たちの森の家へ。
@@ -137,7 +137,7 @@
             <p class="cutline">----------</p>
 
             <!---ふくろうとは--->
-            <div class="board">
+            <div class="board" id="CONCEPT">
                 <h2 class="main_title">CONCEPT</h2>
                 <p class="area_title">森の番人の家</p>
                 <div class="concept_explain_box row">
@@ -173,15 +173,12 @@
                         <img src="{{ asset('css/image/small_people.jpg') }}">
                     </div>
                 </div>
-                <!--div>
-                            <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                        </div-->
             </div>
 
             <p class="cutline">----------</p>
 
             <!---活動していること--->
-            <div class="board">
+            <div class="board" id="ACTION">
                 <h2 class="main_title">ACTION</h2>
                 <div class="flex_container row">
                     <div class="col-md-5 order-md-1">
@@ -216,7 +213,7 @@
             <p class="cutline">----------</p>
 
             <!---Fukurou通信--->
-            <div class="board">
+            <div class="board" id="BLOG">
                 <h2 class="main_title">BLOG</h2>
                 <ul class="blog_slider">
                     @forelse($blogs as $blog)
@@ -236,9 +233,6 @@
                                 <div class="top_blog_info">
                                     <p class="top_blog_title">{{ Str::limit($blog->title, 50) }}</p>
                                     <p class="top_blog_text">{{ Str::limit($blog->first_paragraph, 50) }}</p>
-                                    <!--div class="detail_link_box">
-                                        <p class="detail_link">Read More &#62</p>
-                                    </div-->
                                 </div>
                             </div>
                         </a>
@@ -252,7 +246,7 @@
             <p class="cutline">----------</p>
 
             <!---アクセス--->
-            <div class="board">
+            <div class="board" id="ACCESS">
                 <h2 class="main_title">ACCESS</h2>
                 <p class="area_intro">周辺に公共交通機関がありません。
                     <br>車か徒歩でお越しください。

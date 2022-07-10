@@ -105,7 +105,7 @@
     cursor: pointer;
     width: 50px;
     height: 50px;
-    margin: 10vh 10% 0 0;
+    margin: 10vh 5% 0 0;
     z-index: 10;
 }
 .editbox{
@@ -290,21 +290,6 @@
     background-position: center;
     height: 100vh;
     margin: 0;
-}
-#CONCEPT{
-    background-color: rgba(211, 210, 191, 1);
-}
-#ACTION{
-    background-color: rgba(225, 198, 192, 1);
-}
-#GALLERY{
-    background-color: rgba(94, 101, 102, 0.8);
-}
-#BLOG{
-    background-color: rgba(36, 49, 70, 1);
-}
-#ACCESS{
-    background-color: rgba(52, 97, 78, 1);
 }
 
 /*--------topフェードアウト＆フェードイン---------*/

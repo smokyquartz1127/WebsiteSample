@@ -11,7 +11,7 @@
     <div class="main_content">
         <div class="main_background">
             <!---施設案内--->
-            <div class="board">
+            <div class="board" id="ABOUT">
                 <h2 class="main_title">ABOUT</h2>
                 <p class="area_title">森と、ともに暮らす</p>
                 <p class="area_intro">ようこそ、私たちの森の家へ。
@@ -132,7 +132,7 @@
             <p class="cutline">----------</p>
 
             <!---ふくろうとは--->
-            <div class="board">
+            <div class="board" id="CONCEPT">
                 <h2 class="main_title">CONCEPT</h2>
                 <p class="area_title">森の番人の家</p>
                 <div class="concept_explain_box row">
@@ -173,7 +173,7 @@
             <p class="cutline">----------</p>
 
             <!---活動していること--->
-            <div class="board">
+            <div class="board" id="ACTION">
                 <h2 class="main_title">ACTION</h2>
                 <div class="flex_container row">
                     <div class="col-md-5 order-md-1">
@@ -187,9 +187,6 @@
                             <div class="bird_image">
                                 <img src="{{ asset('css/image/owl_tree.jpg') }}">
                             </div>
-                            <!--div>
-                                        <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                                    </div-->
                         </div>
                     </div>
                     <div class="col-md-5 order-md-2">
@@ -203,9 +200,6 @@
                             <div class="bird_image">
                                 <img src="{{ asset('css/image/owl_sky.jpg') }}">
                             </div>
-                            <!--div>
-                                    <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                                </div-->
                         </div>
                     </div>
                 </div>
@@ -214,7 +208,7 @@
             <p class="cutline">----------</p>
 
             <!---Fukurou通信--->
-            <div class="board">
+            <div class="board" id="BLOG">
                 <h2 class="main_title">BLOG</h2>
                 <ul class="blog_slider">
                     @forelse($blogs as $blog)
@@ -247,7 +241,7 @@
             <p class="cutline">----------</p>
 
             <!---アクセス--->
-            <div class="board">
+            <div class="board" id="ACCESS">
                 <h2 class="main_title">ACCESS</h2>
                 <p class="area_intro">周辺に公共交通機関がありません。
                     <br>車か徒歩でお越しください。

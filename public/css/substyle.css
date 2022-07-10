@@ -2,7 +2,6 @@
 /*-------------------reserve-------------------*/
 .reserve_back{
     min-height: 100vh;
-    /*background-color: #A6936E;*/
     background-image: url('image/saboten.webp');
     background-repeat: no-repeat;
     background-position: center;
@@ -294,9 +293,6 @@
     border-right: dashed 2px #ffffff;
     margin-top: 7vh;
 }
-/*.room_main{
-    margin: 7vh 0 15% 5%;
-}*/
 .room_box{
     display: flex;
     border: solid 1px #362607;
@@ -316,7 +312,7 @@
     margin: 1vh 0;
 }
 .room_message{
-    font-size: 1vw;
+    font-size: 3vmin;
     text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
     font-family: 'IM Fell English SC', serif;
@@ -329,7 +325,7 @@
     margin: 2vmin auto;
 }
 .room_explain li{
-    font-size: 1vw;
+    font-size: 2.5vmin;
     font-family: 'Gloria Hallelujah', cursive;
     font-family: 'IM Fell English SC', serif;
     font-family: 'Kiwi Maru', serif;
