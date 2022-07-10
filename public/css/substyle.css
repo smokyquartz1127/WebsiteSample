@@ -30,7 +30,6 @@
     font-family: 'Kiwi Maru', serif;
 }
 .reserve_left{
-    /*width: 60%;*/
     background-color: #ffffff;
     margin: 5% 0 5% 10%;
     padding: 5%;
@@ -43,7 +42,6 @@
     border: solid 1px #362607;
 }
 .reserve_right{
-    /*width: 20vw;*/
     height: 30vh;
     background-color: #ffffff;
     margin: 5% 10% 5% 0;
@@ -57,6 +55,18 @@
     margin: 2vmin 0 5vmin 0;
     color: #B88729;
 }
+.reserve_bill{
+    width: 90%;
+    margin: 5vmin auto;
+    border: solid 1px #362607;
+}
+.reserve_bill p{
+    font-size: 4vmin;
+    text-align: center;
+    font-weight: bold;
+    margin: 2vmin 0 5vmin 0;
+    color: #B88729;
+}
 .finish_thanks{
     width: 100%;
     height: 30vh;
@@ -65,8 +75,9 @@
 }
 .finish_thanks h2{
     text-align: center;
-    font-size: 4vmin;
+    font-size: 5vmin;
     padding-top: 20vmin;
+    font-weight: bold;
 }
 .finish_backhome{
     text-align: center;
@@ -261,6 +272,7 @@
 .article_link li{
     margin: 0px 20px;
     margin-bottom: 50px;
+    font-size: 3vmin;
 }
 
 /*----------------room--------------------*/
@@ -296,7 +308,7 @@
     width: 70%;
 }
 .room_explain h2{
-    font-size: 2vw;
+    font-size: 4vmin;
     text-align: center;
     font-family: 'Gloria Hallelujah', cursive;
     font-family: 'IM Fell English SC', serif;
@@ -345,6 +357,7 @@
 }
 .sns_container{
     color: #000000;
+    margin-top: 10vmin;
 }
 .posts_left{
     position: fixed;
@@ -366,8 +379,8 @@
 .all_posts{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 0 7vmin;
     margin: 0 0 20% 0;
+    justify-content: center;
 }
 .all_posts a{
     margin: 0 1vmin 0 0;
@@ -377,7 +390,7 @@
     height: 40vmin;
     background-color: rgba(255, 255, 255, 0.9);
     border: solid 1px #000000;
-    margin-bottom: 1vmin;
+    margin: 1vmin;
 }
 .post_box_star{
     width: 2vmin;
@@ -411,17 +424,18 @@
 .post_name{
     display: flex;
     width: 95%;
-    margin: 5px auto;
-    height: 20%;
+    margin: auto;
+    height: 10vmin;
 }
 .post_name p{
-    line-height: 50px;
-    padding-left: 5px;
+    padding: 3vmin 0 0 1vmin;
+    font-size: 2vmin;
 }
 .post_name img{
-    width: 7vmin;
-    height: 7vmin;
+    width: 9vmin;
+    height: 9vmin;
     border-radius: 50%;
+    margin: 0.5vmin 0;
 }
 .post_icon{
     margin: auto 0;
@@ -481,14 +495,14 @@
 }
 .mypage_user{
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 70vmin;
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
-    padding-bottom: 10vh;
+    padding-bottom: 10vmin;
     margin-top: 5vh;
 }
 .mypage_profile{
@@ -560,7 +574,7 @@
     color: #ffffff;
 }
 .mypage_tab{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -569,7 +583,7 @@
     margin: 0 auto;
 }
 .mypage_tab li{
-    width: 20vw;
+    width: 30vmin;
 }
 .mypage_tab li a{
     display: block;
@@ -581,7 +595,7 @@
     background-color: #f1fd43;
 }
 .mypage_container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border-top: solid 1px #f1fd43;
 }
@@ -620,14 +634,15 @@
     background-color: #FFF7E9;
 }
 .mypage_all_posts{
-    width: 108vmin;
+    width: 90%;
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .mypage_post_thumbnail{
-    width: 35vmin;
-    height: 35vmin;
+    width: 30vmin;
+    height: 30vmin;
     border: solid 1px #000000;
     margin: 0.5vmin;
 }
@@ -677,7 +692,18 @@
 .register_empty{
     text-align: center;
 }
-
+.empty_posts{
+    content: "";
+    width: 30vmin;
+    height: 30vmin;
+    margin: 0.5vmin;
+}
+.empty_likes{
+    content: "";
+    width: 40vmin;
+    height: 40vmin;
+    margin: 1vmin;
+}
 /*管理者ページ*/
 .admin_home h2{
     height: 20vh;

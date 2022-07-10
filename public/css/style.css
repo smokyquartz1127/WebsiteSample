@@ -9,14 +9,6 @@ body{
 .not_scrollbar::-webkit-scrollbar{
     display: none;
 }
-/*.background_whole{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('image/forest.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -89,7 +81,7 @@ a:active {
     text-align: center;
     font-family: 'IM Fell English SC', serif;
     color: #000000;
-    font-size: 2vw;
+    font-size: 4vmin;
 }
 .title_color_change{
     width: 80%;
@@ -97,7 +89,7 @@ a:active {
     border-bottom: solid 1px #FFF7E9;
 }
 .area_title{
-    font-size: 2vw;
+    font-size: 3.5vmin;
     font-family: 'Gloria Hallelujah', cursive;
     font-family: 'IM Fell English SC', serif;
     font-family: 'Kiwi Maru', serif;
@@ -331,9 +323,9 @@ header{
     padding: 0 30px;
 }
 .top_blog_title{
-    font-size: 1vw;
+    font-size: 3vmin;
     font-family: 'Gloria Hallelujah', cursive;
-    font-family: 'IM Fell English SC', serif;
+    font-family: 'IM.5 Fell English SC', serif;
     font-family: 'Kiwi Maru', serif;
     text-align: center;
     margin-top: 20px;
@@ -411,12 +403,11 @@ header{
     margin-bottom: 10px;
     text-align: center;
 }
-.footer_link li{
+/*.footer_link li{
     margin-bottom: 5px;
     text-align: center;
     color: #ffffff;
-    font-size: 1vw;
-}
+}*/
 .footer_link li:last-child{
     margin-bottom: 0px;
 }
@@ -432,7 +423,7 @@ header{
 .footer_link_small li{
     margin-bottom: 1vw;
     text-align: center;
-    font-size: 1vw;
+    font-size: 2.5vmin;
 }
 .footer_link_small li:last-child{
     margin-bottom: 0px;

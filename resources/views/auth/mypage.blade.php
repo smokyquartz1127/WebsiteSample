@@ -65,35 +65,44 @@
                 @empty
                     <p class="register_empty">まだ投稿はありません。</p>
                 @endforelse
+                <div class="empty_posts"></div>
+                <div class="empty_posts"></div>
+                <div class="empty_posts"></div>
+                <div class="empty_posts"></div>
             </div>
         </div>
         <div id="likes" class="mypage_split">
+            <div class="mypage_all_posts">
             @forelse($like_posts as $post)
             <a href="{{ route('posts.show', $post->id) }}">
-                <div class="post_box">
-                    <div class="post_name">
-                        <div class="post_icon">
-                            @if ($post->user->icon_image !== '')
-                                <img src="{{ asset('storage/' . $post->user->icon_image) }}">
+                    <div class="post_box">
+                        <div class="post_name">
+                            <div class="post_icon">
+                                @if ($post->user->icon_image !== '')
+                                    <img src="{{ asset('storage/' . $post->user->icon_image) }}">
+                                @else
+                                    <img src="{{ asset('css/image/bird_shima_fukurou.png') }}" alt="画像はありません。" class="user_image">
+                                @endif
+                            </div>
+                            <p class="d-md-block d-none">{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('Y/m/d') }}&nbsp;{{ Str::limit($post->user->name, 15) }}
+                            </p>
+                            <p class="d-block d-md-none">{{ Str::limit($post->user->name, 15) }}</p>
+                        </div>
+                        <div class="post_thumbnail">
+                            @if ($post->image !== '')
+                                <img src="{{ asset('storage/' . $post->image) }}">
                             @else
-                                <img src="{{ asset('css/image/bird_shima_fukurou.png') }}" alt="画像はありません。" class="user_image">
+                                <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                             @endif
                         </div>
-                        <p>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('Y/m/d') }}&nbsp;{{ Str::limit($post->user->name, 15) }}
-                        </p>
                     </div>
-                    <div class="post_thumbnail">
-                        @if ($post->image !== '')
-                            <img src="{{ asset('storage/' . $post->image) }}">
-                        @else
-                            <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
-                        @endif
-                    </div>
-                </div>
             </a>
             @empty
                 <p class="register_empty">ここではいいねした投稿が見ることができます。</p>
             @endforelse
+            <div class="empty_likes"></div>
+            <div class="empty_likes"></div>
+        </div>
         </div>
         <div id="info" class="mypage_split">
             <p  class="mypage_table_title">宿泊履歴</p>

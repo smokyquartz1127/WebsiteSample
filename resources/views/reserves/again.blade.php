@@ -25,8 +25,8 @@
                     <label class="col-form-label text-md-right">お部屋：
                         <select name="room_id">
                             @forelse($rooms as $room)
-                                @if ($room_id === $room->id)
-                                    <option value="{{ $room->id }}" selected="selcted">{{ $room->name }}</option>
+                                @if ($room->id === $room_id)
+                                    <option value="{{ $room->id }}" selected>{{ $room->name }}</option>
                                 @else
                                     <option value="{{ $room->id }}">{{ $room->name }}</option>
                                 @endif

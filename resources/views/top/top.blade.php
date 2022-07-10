@@ -13,9 +13,6 @@
             <p>A fantasy hotel in the forest.</p>
         </div>
     </div>
-    <!--div class="scroll_marker">
-            <img src="{ asset('css/image/scroll_marker.png') }}">
-        </div-->
     <div class="main_content">
         <div class="main_background">
             <!---施設案内--->
@@ -198,9 +195,6 @@
                             <div class="bird_image">
                                 <img src="{{ asset('css/image/owl_tree.jpg') }}">
                             </div>
-                            <!--div>
-                                        <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                                    </div-->
                         </div>
                     </div>
                     <div class="col-md-5 order-md-2">
@@ -214,9 +208,6 @@
                             <div class="bird_image">
                                 <img src="{{ asset('css/image/owl_sky.jpg') }}">
                             </div>
-                            <!--div>
-                                    <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                                </div-->
                         </div>
                     </div>
                 </div>

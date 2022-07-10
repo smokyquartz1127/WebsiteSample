@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="row flex_reserve">
-        <div class="reserve_left col-6">
+        <div class="reserve_left col-md-6 col-10">
             <h2>予約確認画面</h2>
             <form>
                 @csrf
@@ -31,13 +31,20 @@
                     <input type="hidden" name="start" value="{{ $start }}">
                     <input type="hidden" name="end" value="{{ $end }}">
                 </div>
+                <div class="reserve_bill d-block d-md-none">
+                    <h2>合計金額</h2>
+                    <p>{{ $price * $number }}円</p>
+                    <ul>
+                        <li>&#149;{{ $room }}&nbsp;{{ $number }}名様</li>
+                    </ul>
+                </div>
                 <input formmethod="GET" type="submit" formaction="{{ route('reserves.again') }}"
                     class="submit btn btn-secondary" value="入力画面に戻る">
                 <input formmethod="POST" type="submit" formaction="{{ route('reserves.regist') }}"
                     class="submit btn btn-primary" value="予約する">
             </form>
         </div>
-        <div class="reserve_right col-3">
+        <div class="reserve_right col-3 d-none d-md-block">
             <h2>合計金額</h2>
             <p>{{ $price * $number }}円</p>
             <ul>

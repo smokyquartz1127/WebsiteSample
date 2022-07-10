@@ -38,6 +38,10 @@
                 @empty
                     <li>まだ投稿はありません。</li>
                 @endforelse
+                <div class="empty_posts"></div>
+                <div class="empty_posts"></div>
+                <div class="empty_posts"></div>
+                <div class="empty_posts"></div>
             </div>
         </div>
         <div id="likes" class="mypage_split">
@@ -71,6 +75,8 @@
             @empty
                 <p>ここではいいねした投稿が見ることができます。</p>
             @endforelse
+            <div class="empty_likes"></div>
+            <div class="empty_likes"></div>
         </div>
     </div>
 @endsection
