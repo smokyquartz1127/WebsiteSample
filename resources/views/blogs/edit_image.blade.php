@@ -4,18 +4,18 @@
     <a href={{ route('adminblog') }}>&lt;戻る</a>
     <div class="detail">
         @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
         <div>
             <p>現在の画像</p>
-            @if($blog->image !== '')
-                <img src="{{ asset('storage/'. $blog->image) }}">
+            @if ($blog->image !== '')
+                <img src="{{ asset('storage/' . $blog->image) }}">
             @else
                 <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
             @endif

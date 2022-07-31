@@ -1,6 +1,5 @@
 @extends('layouts.not_logged_in')
 
-
 @section('main')
     <h2>{{ $title }}</h2>
     <a href={{ route('adminblog') }}>&lt;戻る</a>

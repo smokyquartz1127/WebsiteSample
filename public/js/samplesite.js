@@ -104,9 +104,6 @@ $('#pagelink a[href*="#"]').click(function () {
 
 //--------ログイン選択ボタン---------
 $('.link_title').on('click', function () {
-    /*var findElm = $(this).next(".link_box");
-    $(findElm).slideToggle();*/
-
     if ($(this).hasClass('btn-primary')) {
         $(this).removeClass('btn-primary');
         $(this).addClass('btn-warning');
@@ -310,53 +307,4 @@ $(window).on('load', function () {
     var hashName = location.hash;
     GethashID(hashName);
 });
-
-
-
-
-
-
-
-//------ページネーション----
-/*$.scrollify({
-    section: ".box",
-    scrollbars: "false",
-    interstitialSection: "#header, #footer, .welcome",
-    updateHash: false,
-    easing: "swing",
-    scrollSpeed: 500,
-
-    before: function(i, panels){
-        var ref = panels[i].attr("data-section-name");
-        $(".pagination .active").removeClass("active");
-        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-    },
-    afterRender: function(){
-        var pagination = "<ul class=\"pagination\">";
-        var activeClass = "";
-        $(".box").each(function(i){
-            activeClass = "";
-            if(i === $.scrollify.currentIndex()){
-                activeClass = "active";
-            }
-            pagination +=  "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"></a></li>";
-        });
-        pagination += "</ul>";
-        $("#CONCEPT").append(pagination);
-        $(".pagination a").on("click", $.scrollify.move);
-    }
-});*/
-/*$(document).ready(function(){
-    var hsize = $(window).height();
-    var topsize = $('.top_area').height();
-    $('.board').css('height', `${hsize * 0.8}px`);
-    $('.board').css('margin-top', `${topsize}px`);
-});
-$(window).resize(function(){
-    var hsize = $(window).height();
-    var topsize = $('.top_area').height();
-    $('.board').css('height', `${hsize * 0.85}px`);
-    $('.board').css('margin-top', `${topsize}px`);
-});*/
-
 

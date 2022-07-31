@@ -119,7 +119,6 @@
     margin-left: 10%;
     margin-right: 5%;
     display: flex;
-    /*margin-top: 10%;*/
 }
 .blog_left_bar{
     width: 10%;
@@ -225,7 +224,6 @@
     text-align: right;
 }
 .blog_thumbnail_text{
-    /*width: 15vw;*/
     width: 95%;
     margin: 0 auto;
 }
@@ -404,7 +402,6 @@
 .center_area{
     display: flex;
     margin-left: 30px;
-    /*background-color: #ffffff;*/
     width: 100%;
     flex-wrap: wrap;
 }
@@ -574,7 +571,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*margin-top: -10vh;*/
     background-color: #ffffff;
     margin: 0 auto;
 }

@@ -28,8 +28,10 @@
                                     <p class="blog_detail">詳細を見る&gt;</p>
                                 </a>
                                 <div class="admin_edit">
-                                    <a href="{{ route('blogs.edit', $blog->id) }}" class="admin_edit_button btn btn-secondary">編集</a>
-                                    <a href="{{ route('blogs.editimage', $blog->id) }}" class="admin_edit_button btn btn-secondary">画像編集</a>
+                                    <a href="{{ route('blogs.edit', $blog->id) }}"
+                                        class="admin_edit_button btn btn-secondary">編集</a>
+                                    <a href="{{ route('blogs.editimage', $blog->id) }}"
+                                        class="admin_edit_button btn btn-secondary">画像編集</a>
                                     <form method="POST" action="{{ route('blogs.destroy', $blog->id) }}">
                                         @csrf
                                         @method('delete')

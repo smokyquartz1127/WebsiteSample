@@ -20,7 +20,6 @@
     font-size: 5vmin;
 }
 
-
 /*------Menuボタン--------*/
 .openbtn{
     position: relative;
@@ -31,7 +30,6 @@
     border-radius: 5px;
     z-index: 9999;
     margin: 1% 0 0 1%;
-    /*margin: 0 0 0 auto;*/
 }
 .menubox{
     display: none;
@@ -224,7 +222,6 @@
     right: 3px;
     bottom: 0;
 }
-
 
 /*------ページトップへ戻る----------*/
 #page-top a{

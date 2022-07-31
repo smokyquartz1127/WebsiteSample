@@ -1,11 +1,11 @@
 @extends('layouts.not_logged_in')
 
 @section('main')
-<div id="opening" class="splash">
-    <div id="opening_logo" class="splash_logo">
-        <p class="fade_up">&#9888;This is a Sample Site&#9888;</p>
+    <div id="opening" class="splash">
+        <div id="opening_logo" class="splash_logo">
+            <p class="fade_up">&#9888;This is a Sample Site&#9888;</p>
+        </div>
     </div>
-</div>
     <div class="welcome">
         <div class="welcome_text">
             <p>Welcome to</p>
@@ -217,26 +217,26 @@
                 <h2 class="main_title">BLOG</h2>
                 <ul class="blog_slider">
                     @forelse($blogs as $blog)
-                    <li>
-                        <a href="{{ route('blogs.show_all', $blog->id) }}">
-                            <div class="top_blog_space">
-                                <p class="top_blog_date">
-                                    {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $blog->created_at)->format('Y-m-d') }}
-                                </p>
-                                <div class="top_blog_image">
-                                    @if ($blog->image !== '')
-                                        <img src="{{ asset('storage/' . $blog->image) }}">
-                                    @else
-                                        <img src="{{ asset('css/image/bird_shima_fukurou.png') }}" alt="画像はありません。">
-                                    @endif
+                        <li>
+                            <a href="{{ route('blogs.show_all', $blog->id) }}">
+                                <div class="top_blog_space">
+                                    <p class="top_blog_date">
+                                        {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $blog->created_at)->format('Y-m-d') }}
+                                    </p>
+                                    <div class="top_blog_image">
+                                        @if ($blog->image !== '')
+                                            <img src="{{ asset('storage/' . $blog->image) }}">
+                                        @else
+                                            <img src="{{ asset('css/image/bird_shima_fukurou.png') }}" alt="画像はありません。">
+                                        @endif
+                                    </div>
+                                    <div class="top_blog_info">
+                                        <p class="top_blog_title">{{ Str::limit($blog->title, 50) }}</p>
+                                        <p class="top_blog_text">{{ Str::limit($blog->first_paragraph, 50) }}</p>
+                                    </div>
                                 </div>
-                                <div class="top_blog_info">
-                                    <p class="top_blog_title">{{ Str::limit($blog->title, 50) }}</p>
-                                    <p class="top_blog_text">{{ Str::limit($blog->first_paragraph, 50) }}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
                     @empty
                         <li>投稿はありません。</li>
                     @endforelse

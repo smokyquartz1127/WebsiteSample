@@ -154,9 +154,6 @@
                         <br>・・・・・・・・・・・・・・・・・・・・・・
                     </div>
                 </div>
-                <!--div>
-                    <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                </div-->
             </div>
         </div>
 
@@ -175,9 +172,6 @@
                         <div class="bird_image">
                             <img src="{{ asset('css/image/owl_tree.jpg') }}">
                         </div>
-                        <!--div>
-                            <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                        </div-->
                     </div>
                     <div class="bird_space">
                         <p class="top_blog_title">バードウォッチング会</p>
@@ -189,9 +183,6 @@
                         <div class="bird_image">
                             <img src="{{ asset('css/image/owl_sky.jpg') }}">
                         </div>
-                        <!--div>
-                            <a href="{{ route('top') }}" class="detail_link">Read More &#62</a>
-                        </div-->
                     </div>
                 </div>
             </div>

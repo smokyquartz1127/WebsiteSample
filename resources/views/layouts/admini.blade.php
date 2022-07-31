@@ -6,7 +6,6 @@
     <ul class="link">
         <p>こんにちは、管理者さん！</p>
         <li><a href="{{ route('adminhome') }}">管理者TOP</a></li>
-        <!--li><a href="{{ route('reserves.list') }}">予約管理</a></li-->
         <li><a href="{{ route('adminblog') }}">ブログ編集</a></li>
         <li><a href="{{ route('adminroom') }}">部屋管理</a></li>
         <li><a href="#">設定</a></li>
