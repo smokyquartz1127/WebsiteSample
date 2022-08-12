@@ -24,6 +24,16 @@
                 <p>画像はありません</p>
             @endif
         </div>
+        @if($post->user->id === \Auth::user()->id)
+            <div class="edit_post_button">
+                <a href="{{ route('posts.edit', $post->id) }}" class="submit">編集</a>
+                <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
+                    @csrf
+                    @method('delete')
+                    <input type="submit" value="削除" class="submit">
+                </form>
+            </div>
+        @endif
         <div class="like_button">
             <a>{{ $post->isLikedBy(\Auth::user()) ? '★' : '☆' }}</a>
             <form method="POST" class="like" action="{{ route('posts.toggle_like', $post->id) }}">
