@@ -2,6 +2,15 @@
 
 @section('main')
     <div class="detail">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form method="post" class="post_form" action="{{ route('posts.store') }}" enctype="multipart/form-data">
             @csrf
             <div>

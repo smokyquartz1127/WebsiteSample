@@ -154,6 +154,8 @@ return [
         'icon_image' => 'アイコン画像',
         'background_image' => '背景画像',
         'password' => 'パスワード',
+        'title' => 'タイトル',
+        'text' => '本文'
     ],
 
 ];

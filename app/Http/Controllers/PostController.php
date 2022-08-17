@@ -92,6 +92,6 @@ class PostController extends Controller
             ]);
             \Session::flash('success', 'いいねしました');
         }
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.show', $post->id);
     }
 }
