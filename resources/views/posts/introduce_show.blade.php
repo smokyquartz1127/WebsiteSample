@@ -2,10 +2,10 @@
 
 @section('main')
     <div class="return_button">
-        <a href="{{ route('posts.index') }}">←戻る</a>
+        <a href="{{ route('introduce', $post->user->id) }}">←戻る</a>
     </div>
     <div class="detail">
-        <a href="{{ route('introduce', $post->user->id) }}">
+        <!--a href="{{ route('introduce', $post->user->id) }}"-->
             <div class="post_name">
                 @if ($post->user->icon_image !== '')
                     <img src="{{ asset('storage/' . $post->user->icon_image) }}">
@@ -17,7 +17,7 @@
                 </p>
                 <p class="d-lg-none d-block">{{ Str::limit($post->user->name, 15) }}</p>
             </div>
-        </a>
+        <!--/a-->
         <h2 class="sns_title">{{ $post->title }}</h2>
         <p class="sns_text">{{ $post->text }}</p>
         <div class="sns_image">
@@ -30,7 +30,6 @@
         @if ($post->user->id === \Auth::user()->id)
             <div class="edit_post_button">
                 <a href="{{ route('posts.edit', $post->id) }}" class="submit">編集</a>
-                <a href="{{ route('posts.editimage', $post->id) }}" class="submit">画像編集</a>
                 <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
                     @csrf
                     @method('delete')

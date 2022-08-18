@@ -53,7 +53,7 @@
         <div id="posts" class="mypage_split">
             <div class="mypage_all_posts">
                 @forelse($posts as $post)
-                <a href="{{ route('posts.show', $post->id) }}">
+                <a href="{{ route('posts.mypage_show', $post->id) }}">
                     <div class="mypage_post_thumbnail">
                             @if ($post->image !== '')
                                 <img src="{{ asset('storage/' . $post->image) }}">
@@ -74,7 +74,7 @@
         <div id="likes" class="mypage_split">
             <div class="mypage_all_posts">
             @forelse($like_posts as $post)
-            <a href="{{ route('posts.show', $post->id) }}">
+                <a href="{{ route('posts.mypage_show', $post->id) }}">
                     <div class="post_box">
                         <div class="post_name">
                             <div class="post_icon">
@@ -96,7 +96,7 @@
                             @endif
                         </div>
                     </div>
-            </a>
+                </a>
             @empty
                 <p class="register_empty">ここではいいねした投稿が見ることができます。</p>
             @endforelse

@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="return_button">
-        <a href="{{ route('posts.index') }}">←戻る</a>
+        <a href="{{ route('mypage') }}">←戻る</a>
     </div>
     <div class="detail">
         <a href="{{ route('introduce', $post->user->id) }}">
@@ -30,7 +30,6 @@
         @if ($post->user->id === \Auth::user()->id)
             <div class="edit_post_button">
                 <a href="{{ route('posts.edit', $post->id) }}" class="submit">編集</a>
-                <a href="{{ route('posts.editimage', $post->id) }}" class="submit">画像編集</a>
                 <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
                     @csrf
                     @method('delete')

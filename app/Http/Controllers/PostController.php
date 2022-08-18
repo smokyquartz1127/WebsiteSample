@@ -7,6 +7,7 @@ use App\Blog;
 use App\Like;
 use App\Services\FileUploadService;
 use App\Http\Requests\PostRequest;
+use App\Http\Requests\ImageRequest;
 
 class PostController extends Controller
 {
@@ -51,6 +52,23 @@ class PostController extends Controller
             'post' => $post,
         ]);
     }
+    //投稿詳細(マイページ用)
+    public function mypage_show($id)
+    {
+        $post = Post::find($id);
+        return view('posts.mypage_show', [
+            'post' => $post,
+        ]);
+    }
+    //投稿詳細(introduce用)
+    public function introduce_show($id)
+    {
+        $post = Post::find($id);
+        return view('posts.introduce_show', [
+            'post' => $post,
+        ]);
+    }
+
 
     //編集
     public function edit($id)
@@ -68,6 +86,26 @@ class PostController extends Controller
             'title', 'text',
         ]));
         return redirect()->route('mypage');
+    }
+    //画像編集
+    public function editImage($id){
+        $post = Post::find($id);
+        return view('posts.edit_image', [
+            'post' => $post,
+        ]);
+    }
+    //画像更新処理
+    public function updateImage(FileUploadService $service, $id, ImageRequest $request){
+        $path = $service->saveImage($request->file('image'));
+        $post = Post::find($id);
+        if($post->image !== ''){
+            \Storage::disk('public')->delete(\Storage::url($post->image));
+        }
+
+        $post->update([
+            'image' => $path,
+        ]);
+        return redirect()->route('posts.show', $post->id);
     }
     //削除処理
     public function destroy($id)

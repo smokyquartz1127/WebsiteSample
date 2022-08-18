@@ -26,7 +26,7 @@
         <div id="posts" class="mypage_split">
             <div class="mypage_all_posts">
                 @forelse($posts as $post)
-                <a href="{{ route('posts.show', $post->id) }}">
+                <a href="{{ route('posts.introduce_show', $post->user->id) }}">
                     <div class="mypage_post_thumbnail">
                             @if ($post->image !== '')
                                 <img src="{{ asset('storage/' . $post->image) }}">
@@ -46,7 +46,7 @@
         </div>
         <div id="likes" class="mypage_split">
             @forelse($like_posts as $post)
-            <a href="{{ route('posts.show', $post->id) }}">
+            <a href="{{ route('posts.introduce_show', $post->id) }}">
                 <div class="post_box">
                     <div class="post_name">
                         <div class="post_icon">

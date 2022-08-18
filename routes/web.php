@@ -48,6 +48,10 @@ Route::patch('/blogs/{blog}/blog_editimage', 'BlogController@updateImage')->name
 
 //------------------SNS---------------------------
 Route::resource('posts', 'PostController');
+Route::get('posts/{post}/post_editimage', 'PostController@editimage')->name('posts.editimage');
+Route::patch('/posts/{post}/post_editimage', 'PostController@updateImage')->name('posts.updateimage');
+Route::get('/mypage_posts_show/{post}', 'PostController@mypage_show')->name('posts.mypage_show');
+Route::get('/introduce_posts_show/{post}', 'PostController@introduce_show')->name('posts.introduce_show');
 Route::patch('/posts/{post}/toggle_like', 'PostController@toggleLike')->name('posts.toggle_like');
 
 //------------------予約--------------------------

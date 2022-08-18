@@ -1,6 +1,9 @@
 @extends('layouts.default')
 
 @section('main')
+    <div class="return_button">
+        <a href="{{ route('blogs.index') }}">←戻る</a>
+    </div>
     <div class="detail">
         <div class="article_container">
             <h2>{{ $blog->title }}</h2>
