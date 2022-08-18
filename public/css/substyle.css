@@ -492,6 +492,44 @@
    text-align: center;
    margin: 0 5vmin;
 }
+.post_comment_area{
+    width: 80%;
+    position: relative;
+    background-color: #ffffff;
+    margin: -18% auto 20% auto;
+    padding: 5%;
+    border: solid 1px #000000;
+}
+.comment_text{
+    width: 75%;
+    border: solid 0.5px #7b7b7b;
+    padding: 1vmin;
+}
+.post_comment_box{
+    display: flex;
+    width: 70%;
+    margin: 5vmin auto;
+    padding: 1vmin;
+    border-bottom: solid 1px #362607;
+}
+.post_comment_name{
+    display: flex;
+    margin: auto;
+    height: 10vmin;
+}
+.post_comment_name p{
+    padding-top: 2.5vmin;
+}
+.post_comment_name img{
+    width: 9vmin;
+    height: 9vmin;
+    border-radius: 50%;
+    margin: 0.5vmin 0;
+}
+.post_comment{
+    width: 60vmin;
+    padding-top: 2vmin;
+}
 /*------マイページ---------*/
 .mypage_back{
     width: 100%;

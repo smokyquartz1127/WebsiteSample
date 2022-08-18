@@ -1,7 +1,9 @@
 @extends('layouts.default')
 
 @section('main')
-    <a href="{{ route('mypage') }}">&lt;戻る</a>
+    <div class="return_button">
+        <a href="{{ route('mypage') }}">←戻る</a>
+    </div>
     <div class="detail">
         <form method="POST" action="{{ route('posts.update', $post->id) }}">
             @csrf

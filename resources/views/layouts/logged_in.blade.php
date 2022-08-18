@@ -3,7 +3,7 @@
 @section('link')
     <div class="d-lg-block d-none">
         <div class="top_area">
-            <a href="{{ route('top') }}"><img src="{{ asset('css/image/logo.png') }}" alt="森の隠れ家Fukurou" class="logo"></a>
+            <a href="{{ route('home') }}"><img src="{{ asset('css/image/logo.png') }}" alt="森の隠れ家Fukurou" class="logo"></a>
             <ul class="link">
                 <li>こんにちは!&nbsp;{{ \Auth::user()->name }}さん!</li>
                 <li><a href="{{ route('home') }}">TOP</a></li>
@@ -24,7 +24,7 @@
     <div class="d-block d-lg-none">
         <div class="openbtn"><span></span><span>Menu</span><span></span></div>
         <div class="menubox">
-            <a href="{{ route('top') }}"><img src="{{ asset('css/image/logo.png') }}" alt="森の隠れ家Fukurou" class="logo"></a>
+            <a href="{{ route('home') }}"><img src="{{ asset('css/image/logo.png') }}" alt="森の隠れ家Fukurou" class="logo"></a>
             <ul>
                 <li><a href="{{ route('home') }}">TOP</a></li>
                 <li><a href="{{ route('blogs.index') }}">ふくろう通信</a></li>

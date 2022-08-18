@@ -31,4 +31,19 @@ class Post extends Model
         $result = $liked_users_ids->contains($user->id);
         return $result;
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+    public function commentedUsers()
+    {
+        return $this->belongsToMany('App\User', 'comments');
+    }
+    public function isCommentedBy($user)
+    {
+        $commented_users_ids = $this->commentedUsers->pluck('id');
+        $result = $commented_users_ids->contains($user->id);
+        return $result;
+    }
 }

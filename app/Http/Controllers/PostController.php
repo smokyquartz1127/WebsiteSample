@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\Blog;
+use App\Comment;
 use App\Like;
 use App\Services\FileUploadService;
 use App\Http\Requests\PostRequest;
 use App\Http\Requests\ImageRequest;
+use App\Http\Requests\CommentRequest;
 
 class PostController extends Controller
 {
@@ -53,7 +54,7 @@ class PostController extends Controller
         ]);
     }
     //投稿詳細(マイページ用)
-    public function mypage_show($id)
+    public function mypageShow($id)
     {
         $post = Post::find($id);
         return view('posts.mypage_show', [
@@ -61,12 +62,21 @@ class PostController extends Controller
         ]);
     }
     //投稿詳細(introduce用)
-    public function introduce_show($id)
+    public function introduceShow($id)
     {
         $post = Post::find($id);
         return view('posts.introduce_show', [
             'post' => $post,
         ]);
+    }
+    public function commentStore(CommentRequest $request)
+    {
+        Comment::create([
+            'user_id' => $request->user_id,
+            'post_id' => $request->post_id,
+            'comment' => $request->comment,
+        ]);
+        return redirect()->route('posts.show', $request->post_id);
     }
 
 
