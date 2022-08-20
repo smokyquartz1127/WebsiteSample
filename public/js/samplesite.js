@@ -245,6 +245,11 @@ $('#confirm_fourth').on('click', () => {
     $('.show_fourth').modaal('close')
 });
 
+$('.introduce_modal').modaal({
+    content_source: '#introduce_modal',
+    type: 'inline'
+});
+
 //----------左上から現れる・下から順番に現れる-------------
 function delaySmoothAnime() {
     var time = 0.1;

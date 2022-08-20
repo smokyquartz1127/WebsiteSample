@@ -1,23 +1,22 @@
 @extends('layouts.not_logged_in')
 
 @section('main')
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
-
-    <h1>ログイン</h1>
-    <form method="POST" action="{{ route('admin.login') }}" class="detail">
+    <form method="POST" action="{{ route('admin.login.login') }}" class="detail">
         @csrf
+        <h1>管理者ログイン</h1>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div>
             <label>
-                メールアドレス:
-                <input type="email" name="email">
+                ID:
+                <input type="text" name="user_id">
             </label>
         </div>
         <div>

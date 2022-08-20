@@ -13,6 +13,9 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Admin;
+use App\Http\Controllers;
+use App\Http\Controllers\Admin\LoginController;
 
 //-----------------ログイン----------------------
 //一般
@@ -27,11 +30,27 @@ Route::get('/mypage/{user}/background_edit', 'UserController@background_edit')->
 Route::patch('/mypage/{user}/background_edit', 'UserController@background_update')->name('user.background_update');
 Route::get('/user/{user}', 'UserController@introduce')->name('introduce');
 
+
 //管理者
-Route::prefix('admin')->as('admin.')->namespace('Admin')->group(function(){
+/*Route::prefix('admin')->as('admin.')->namespace('Admin')->group(function(){
     Auth::routes();
 });
-Route::get('/adminhome', 'BlogController@admin_home')->name('adminhome');
+Route::get('/adminhome', 'Admin\Auth\LoginController@adminHome')->name('adminhome');*/
+
+//管理者とフロントでログインを分ける
+Route::prefix('admin')->group(function (){
+    Route::get('login', [Admin\LoginController::class, 'index'])->name('admin.login.index');
+    Route::post('login', [Admin\LoginController::class, 'login'])->name('admin.login.login');
+    Route::get('logout', [Admin\LoginController::class, 'logout'])->name('admin.login.logout');
+});
+Route::prefix('admin')->middleware('auth:administrators')->group(function (){
+    Route::get('/adminindex', [Admin\IndexController::class, 'index'])->name('admin.index');
+});
+
+/*Route::get('login', [Controllers\LoginController::class, 'index'])->name('login.index');
+Route::post('login', [Controllers\LoginController::class, 'login'])->name('login.login');
+Route::get('logout', [Controllers\LoginController::class, 'logout'])->name('login.logout');*/
+
 
 //-----------------トップページ--------------------
 Route::get('/', 'BlogController@top')->name('top');
@@ -51,7 +70,7 @@ Route::resource('posts', 'PostController');
 Route::get('posts/{post}/post_editimage', 'PostController@editimage')->name('posts.editimage');
 Route::patch('/posts/{post}/post_editimage', 'PostController@updateImage')->name('posts.updateimage');
 Route::get('/mypage_posts_show/{post}', 'PostController@mypageShow')->name('posts.mypage_show');
-Route::get('/introduce_posts_show/{post}', 'PostController@introduceShow')->name('posts.introduce_show');
+Route::get('/introduce_posts_show/{post}', 'PostController@introduceShow')->name('introduce.show');
 Route::patch('/posts/{post}/toggle_like', 'PostController@toggleLike')->name('posts.toggle_like');
 //-----------------コメント----------------
 Route::post('/comments', 'PostController@commentStore')->name('comments.store');

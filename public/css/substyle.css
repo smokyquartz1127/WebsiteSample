@@ -788,3 +788,7 @@
     color: #ffffff;
     font-weight: bold;
 }
+
+#introduce_modal{
+    display: none;
+}

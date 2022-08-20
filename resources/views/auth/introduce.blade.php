@@ -1,6 +1,9 @@
 @extends('layouts.logged_in')
 
 @section('main')
+    <div class="return_button">
+        <a href="{{ route('mypage') }}">←戻る</a>
+    </div>
     <div class="mypage_user" style="background-image: url({{ asset('storage/' . $user->background_image) }})">
         <div class="mypage_profile">
             <div class="mypage_icon">
@@ -26,15 +29,15 @@
         <div id="posts" class="mypage_split">
             <div class="mypage_all_posts">
                 @forelse($posts as $post)
-                <a href="{{ route('posts.introduce_show', $post->user->id) }}">
-                    <div class="mypage_post_thumbnail">
+                    <a href="{{ route('introduce.show', $post->id) }}">
+                        <div class="mypage_post_thumbnail">
                             @if ($post->image !== '')
                                 <img src="{{ asset('storage/' . $post->image) }}">
                             @else
                                 <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                             @endif
-                    </div>
-                </a>
+                        </div>
+                    </a>
                 @empty
                     <li>まだ投稿はありません。</li>
                 @endforelse
@@ -46,32 +49,33 @@
         </div>
         <div id="likes" class="mypage_split">
             @forelse($like_posts as $post)
-            <a href="{{ route('posts.introduce_show', $post->id) }}">
-                <div class="post_box">
-                    <div class="post_name">
-                        <div class="post_icon">
-                            @if ($post->user->icon_image !== '')
-                                <img src="{{ asset('storage/' . $post->user->icon_image) }}">
+                <a href="{{ route('introduce.show', $post->id) }}">
+                    <div class="post_box">
+                        <div class="post_name">
+                            <div class="post_icon">
+                                @if ($post->user->icon_image !== '')
+                                    <img src="{{ asset('storage/' . $post->user->icon_image) }}">
+                                @else
+                                    <img src="{{ asset('css/image/bird_shima_fukurou.png') }}" alt="画像はありません。"
+                                        class="user_image">
+                                @endif
+                            </div>
+                            <p>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('Y/m/d') }}&nbsp;{{ Str::limit($post->user->name, 15) }}
+                            </p>
+                        </div>
+                        <div class="post_thumbnail">
+                            @if ($post->image !== '')
+                                <img src="{{ asset('storage/' . $post->image) }}">
                             @else
-                                <img src="{{ asset('css/image/bird_shima_fukurou.png') }}" alt="画像はありません。" class="user_image">
+                                <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                             @endif
                         </div>
-                        <p>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('Y/m/d') }}&nbsp;{{ Str::limit($post->user->name, 15) }}
-                        </p>
+                        <div class="blog_thumbnail_text">
+                            <h2 class="blog_thumbnail_title">{{ Str::limit($post->title, 20) }}</h2>
+                            <p class="blog_thumbnail_explain">{{ Str::limit($post->text, 50) }}</p>
+                        </div>
                     </div>
-                    <div class="post_thumbnail">
-                        @if ($post->image !== '')
-                            <img src="{{ asset('storage/' . $post->image) }}">
-                        @else
-                            <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
-                        @endif
-                    </div>
-                    <div class="blog_thumbnail_text">
-                        <h2 class="blog_thumbnail_title">{{ Str::limit($post->title, 20) }}</h2>
-                        <p class="blog_thumbnail_explain">{{ Str::limit($post->text, 50) }}</p>
-                    </div>
-                </div>
-            </a>
+                </a>
             @empty
                 <p>ここではいいねした投稿が見ることができます。</p>
             @endforelse

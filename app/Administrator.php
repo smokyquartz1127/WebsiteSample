@@ -3,16 +3,12 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Notifications\Notifiable;
-/*use Illuminate\Database\Eloquent\Factories\HasFactory;*/
 use Illuminate\Foundation\Auth\User as Authenticatable;
-/*use Laravel\Sanctum\HasApiTokens;*/
+use Illuminate\Notifications\Notifiable;
 
-class Admin extends Authenticatable
+class Administrator extends Authenticatable
 {
     use Notifiable;
-
-    //protected $guard = 'admin';
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +16,7 @@ class Admin extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'user_id', 'password',
     ];
 
     /**
@@ -40,4 +36,6 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }

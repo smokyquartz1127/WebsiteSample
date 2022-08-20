@@ -82,10 +82,6 @@ class BlogController extends Controller
 
     //---------------ここから管理者のみ--------------------
     //----------------------管理者ページ-----------------------
-    public function admin_home()
-    {
-        return view('admin.admin');
-    }
 
     //管理者用ブログトップページ
     public function adminindex()

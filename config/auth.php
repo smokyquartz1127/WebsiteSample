@@ -41,15 +41,21 @@ return [
             'provider' => 'users',
         ],
 
-        'api' => [
+       /* 'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
+        ],*/
+
+        //追加
+        'administrators' => [
+            'driver' => 'session',
+            'provider' => 'administrators',
         ],
 
-        'admin' => [
+        'members' => [
             'driver' => 'session',
-            'provider' => 'admins',
+            'provider' => 'members',
         ],
     ],
 
@@ -76,15 +82,15 @@ return [
             'model' => App\User::class,
         ],
 
-        'admins' => [
+        'administrators' => [
             'driver' => 'eloquent',
-            'model' => App\Admin::class,
+            'model' => App\Administrator::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'members' => [
+            'driver' => 'eloquent',
+            'model' => App\Member::class,
+        ],
     ],
 
     /*
@@ -110,8 +116,8 @@ return [
             'throttle' => 60,
         ],
 
-        'admins' => [
-            'provider' => 'admins',
+        'administrators' => [
+            'provider' => 'administrators',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

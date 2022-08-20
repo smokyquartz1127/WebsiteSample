@@ -16,6 +16,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('login') }}" class="dropdown-item">ログイン</a></li>
                             <li><a href="{{ route('register') }}" class="dropdown-item">新規登録</a></li>
+                            <li><a href="{{ route('admin.login.index') }}" class="dropdown-item">管理者ページ</a></li>
                         </ul>
                     </section>
                 </li>
