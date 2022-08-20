@@ -70,10 +70,6 @@
                                 <img src="{{ asset('css/image/bird_shima_fukurou.png') }}">
                             @endif
                         </div>
-                        <div class="blog_thumbnail_text">
-                            <h2 class="blog_thumbnail_title">{{ Str::limit($post->title, 20) }}</h2>
-                            <p class="blog_thumbnail_explain">{{ Str::limit($post->text, 50) }}</p>
-                        </div>
                     </div>
                 </a>
             @empty
