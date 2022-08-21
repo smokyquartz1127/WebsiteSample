@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="return_button">
-        <a href="{{ route('blogs.index_all') }}">←戻る</a>
+        <a href="{{ url()->previous() }}">←戻る</a>
     </div>
     <div class="detail">
         <div class="article_container">

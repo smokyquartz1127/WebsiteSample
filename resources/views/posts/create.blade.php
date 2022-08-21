@@ -1,6 +1,9 @@
 @extends('layouts.default')
 
 @section('main')
+    <div class="return_button">
+        <a href="{{ route('posts.index') }}">←戻る</a>
+    </div>
     <div class="detail">
         @if ($errors->any())
             <div class="alert alert-danger">

@@ -158,6 +158,7 @@ return [
         'text' => '本文',
         'profile' => 'プロフィール',
         'comment' => 'コメント',
+        'image' => '画像',
     ],
 
 ];
