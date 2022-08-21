@@ -1,17 +1,20 @@
 @extends('layouts.logged_in')
 
 @section('main')
+    <div class="return_button">
+        <a href="{{ route('mypage') }}">←戻る</a>
+    </div>
     <form method="POST" action="{{ route('user.icon_update', $user->id) }}" enctype="multipart/form-data" class="detail">
         @csrf
         @method('patch')
         @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
         <p class="edit_mypage">アイコン画像変更</p>
         <div class="mypage_image_change">
@@ -19,7 +22,7 @@
             @if ($user->icon_image !== '')
                 <img src="{{ asset('storage/' . $user->icon_image) }}">
             @else
-            <img src="{{ asset('css/image/bird_mimizuku.png') }}" alt="デフォルト画像" class="user_image">
+                <img src="{{ asset('css/image/bird_mimizuku.png') }}" alt="デフォルト画像" class="user_image">
             @endif
         </div>
         <div class="form-group form-row">

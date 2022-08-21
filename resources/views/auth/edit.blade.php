@@ -1,6 +1,9 @@
 @extends('layouts.logged_in')
 
 @section('main')
+    <div class="return_button">
+        <a href="{{ route('mypage') }}">←戻る</a>
+    </div>
     <form method="POST" action="{{ route('user.update', $user->id) }}" class="detail">
         @csrf
         @method('patch')

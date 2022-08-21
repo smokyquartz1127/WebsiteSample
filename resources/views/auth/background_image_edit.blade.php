@@ -1,8 +1,10 @@
 @extends('layouts.logged_in')
 
 @section('main')
-    <form method="POST" action="{{ route('user.background_update', $user->id) }}" enctype="multipart/form-data"
-        class="detail">
+    <div class="return_button">
+        <a href="{{ route('mypage') }}">←戻る</a>
+    </div>
+    <form method="POST" action="{{ route('user.background_update', $user->id) }}" enctype="multipart/form-data" class="detail">
         @csrf
         @method('patch')
         @if ($errors->any())

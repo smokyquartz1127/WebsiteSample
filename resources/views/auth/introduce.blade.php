@@ -2,7 +2,7 @@
 
 @section('main')
     <div class="return_button">
-        <a href="{{ route('mypage') }}">←戻る</a>
+        <a href="{{ route('posts.index') }}">←戻る</a>
     </div>
     <div class="mypage_user" style="background-image: url({{ asset('storage/' . $user->background_image) }})">
         <div class="mypage_profile">
@@ -14,7 +14,7 @@
                 @endif
             </div>
             <div class="profile_text">
-                <p>{{ \Auth::user()->name }}</p>
+                <p>{{ $user->name }}</p>
                 <p>{{ $user->profile }}</p>
             </div>
         </div>
@@ -48,6 +48,7 @@
             </div>
         </div>
         <div id="likes" class="mypage_split">
+            <div class="mypage_all_posts">
             @forelse($like_posts as $post)
                 <a href="{{ route('introduce.show', $post->id) }}">
                     <div class="post_box">
@@ -77,6 +78,7 @@
             @endforelse
             <div class="empty_likes"></div>
             <div class="empty_likes"></div>
+            </div>
         </div>
     </div>
 @endsection

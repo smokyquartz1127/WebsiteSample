@@ -155,7 +155,9 @@ return [
         'background_image' => '背景画像',
         'password' => 'パスワード',
         'title' => 'タイトル',
-        'text' => '本文'
+        'text' => '本文',
+        'profile' => 'プロフィール',
+        'comment' => 'コメント',
     ],
 
 ];

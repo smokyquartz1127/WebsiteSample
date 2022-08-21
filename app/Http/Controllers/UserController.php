@@ -6,6 +6,7 @@ use App\User;
 use App\Reserve;
 use App\Services\FileUploadService;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 use App\Http\Requests\IconImageRequest;
 use App\Http\Requests\BackgroundImageRequest;
 
@@ -44,7 +45,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function update(Request $request){
+    public function update(UserRequest $request){
         $user = \Auth::user();
         $user->update($request->only([
             'name', 'email', 'profile',
