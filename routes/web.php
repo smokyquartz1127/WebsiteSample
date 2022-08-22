@@ -34,8 +34,8 @@ Route::get('/user/{user}', 'UserController@introduce')->name('introduce');
 //管理者
 /*Route::prefix('admin')->as('admin.')->namespace('Admin')->group(function(){
     Auth::routes();
-});
-Route::get('/adminhome', 'Admin\Auth\LoginController@adminHome')->name('adminhome');*/
+});*/
+Route::get('/adminhome', 'Auth\LoginController@adminHome')->name('adminhome');
 
 //管理者とフロントでログインを分ける
 Route::prefix('admin')->group(function (){

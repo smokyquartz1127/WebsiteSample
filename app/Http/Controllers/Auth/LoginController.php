@@ -40,6 +40,11 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function adminHome()
+    {
+        return view('admin.admin');
+    }
+
     protected function loggedOut(Request $request)
     {
         return redirect(route('top'));
