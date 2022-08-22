@@ -12,7 +12,7 @@
                 <li><a href="{{ route('reserves.index') }}">予約する</a></li>
                 <li><a href="{{ route('posts.index') }}">旅人のひとこと</a></li>
                 <li><a href="{{ route('mypage') }}">マイページ</a></li>
-                @if( {{ \Auth::user()->is_admin }} === true)
+                @if( \Auth::user()->is_admin === true)
                 <li><a href="{{ route('adminhome') }}" class="dropdown-item">管理者ページ</a></li>
                 @endif
                 <li>
