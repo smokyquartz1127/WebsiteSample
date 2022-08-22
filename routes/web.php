@@ -35,7 +35,6 @@ Route::get('/user/{user}', 'UserController@introduce')->name('introduce');
 /*Route::prefix('admin')->as('admin.')->namespace('Admin')->group(function(){
     Auth::routes();
 });*/
-Route::get('/adminhome', 'Auth\LoginController@adminHome')->name('adminhome');
 
 //管理者とフロントでログインを分ける
 /*Route::prefix('admin')->group(function (){
@@ -55,6 +54,7 @@ Route::get('logout', [Controllers\LoginController::class, 'logout'])->name('logi
 //-----------------トップページ--------------------
 Route::get('/', 'BlogController@top')->name('top');
 Route::get('/home', 'BlogController@home')->name('home');
+Route::get('/adminhome', 'Admin\IndexController@index')->name('adminhome');
 
 //-----------------ブログ-------------------------
 Route::resource('blogs', 'BlogController');
