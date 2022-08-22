@@ -2,7 +2,7 @@
 
 @section('link')
 <div class="top_area">
-    <a href="{{ route('adminhome') }}"><img src="image/logo.png" alt="森の隠れ家Fukurou"></a>
+    <a href="{{ route('adminhome') }}"><img src="{{ asset('css/image/logo.png') }}" alt="森の隠れ家Fukurou" class="logo"></a>
     <ul class="link">
         <p>こんにちは、管理者さん！</p>
         <li><a href="{{ route('adminhome') }}">管理者TOP</a></li>

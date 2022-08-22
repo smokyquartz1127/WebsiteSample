@@ -38,14 +38,14 @@ Route::get('/user/{user}', 'UserController@introduce')->name('introduce');
 Route::get('/adminhome', 'Auth\LoginController@adminHome')->name('adminhome');
 
 //管理者とフロントでログインを分ける
-Route::prefix('admin')->group(function (){
+/*Route::prefix('admin')->group(function (){
     Route::get('login', [Admin\LoginController::class, 'index'])->name('admin.login.index');
     Route::post('login', [Admin\LoginController::class, 'login'])->name('admin.login.login');
     Route::get('logout', [Admin\LoginController::class, 'logout'])->name('admin.login.logout');
 });
 Route::prefix('admin')->middleware('auth:administrators')->group(function (){
     Route::get('/adminindex', [Admin\IndexController::class, 'index'])->name('admin.index');
-});
+});*/
 
 /*Route::get('login', [Controllers\LoginController::class, 'index'])->name('login.index');
 Route::post('login', [Controllers\LoginController::class, 'login'])->name('login.login');

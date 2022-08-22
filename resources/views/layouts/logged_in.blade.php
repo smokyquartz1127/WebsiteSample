@@ -13,7 +13,7 @@
                 <li><a href="{{ route('posts.index') }}">旅人のひとこと</a></li>
                 <li><a href="{{ route('mypage') }}">マイページ</a></li>
                 @if( \Auth::user()->is_admin === 1 )
-                <li><a href="{{ route('adminhome') }}" class="dropdown-item">管理者ページ</a></li>
+                <li><a href="{{ route('adminhome') }}">管理者ページ</a></li>
                 @endif
                 <li>
                     <form action="{{ route('logout') }}" method="post">
