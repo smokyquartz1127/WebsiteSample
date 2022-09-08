@@ -35,6 +35,9 @@
                 <li><a href="{{ route('reserves.index') }}">予約する</a></li>
                 <li><a href="{{ route('posts.index') }}">旅人のひとこと</a></li>
                 <li><a href="{{ route('mypage') }}">マイページ</a></li>
+                @if( \Auth::user()->is_admin === 1 )
+                <li><a href="{{ route('adminhome') }}">管理者ページ</a></li>
+                @endif
                 <div class="menubox_login">
                     <form action="{{ route('logout') }}" method="post">
                         @csrf

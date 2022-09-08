@@ -9,22 +9,10 @@ use App\Services\FileUploadService;
 
 class BlogController extends Controller
 {
-//-------------------------トップページ---------------------------
-    public function top()
-    {
-        $blogs = Blog::latest()->take(8)->get();
-        return view('top.top', [
-            'blogs' => $blogs,
-        ]);
-    }
 
- //---------------ホーム画面(ログイン時)---------
-    public function home()
+    public function __construct()
     {
-        $blogs = Blog::latest()->take(8)->get();
-        return view('top.home', [
-            'blogs' => $blogs,
-        ]);
+        $this->middleware('auth');
     }
 
 //--------------------------ブログ--------------------------------
@@ -45,33 +33,6 @@ class BlogController extends Controller
         $previous = $blog->where('id', '<', $id)->orderBy('id', 'desc')->first();
         $next = $blog->where('id', '>', $id)->orderBy('id', 'asc')->first();
         return view('blogs.show', [
-            'title' => 'ふくろう通信',
-            'blog' => $blog,
-            'max' => $max,
-            'previous' => $previous,
-            'next' => $next,
-        ]);
-    }
-
-    //ブログ一覧ページ(未ログイン)
-    public function index_all()
-    {
-        $blogs = Blog::latest('created_at')->get();
-        $pickups = Blog::inRandomOrder()->take(3)->get();
-        $blogs_count = $blogs->count();
-        return view('blogs.index_all', [
-            'blogs' => $blogs,
-            'pickups' => $pickups,
-            'blogs_count' => $blogs_count + 1,
-        ]);
-    }
-    public function show_all($id)
-    {
-        $blog = Blog::find($id);
-        $max = Blog::max('id');
-        $previous = $blog->where('id', '<', $id)->orderBy('id', 'desc')->first();
-        $next = $blog->where('id', '>', $id)->orderBy('id', 'asc')->first();
-        return view('blogs.show_all', [
             'title' => 'ふくろう通信',
             'blog' => $blog,
             'max' => $max,

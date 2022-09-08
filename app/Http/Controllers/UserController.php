@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Blog;
 use App\Reserve;
 use App\Services\FileUploadService;
 use Illuminate\Http\Request;
@@ -13,6 +14,20 @@ use App\Http\Requests\BackgroundImageRequest;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    //---------------ホーム画面(ログイン時)---------
+    public function home()
+    {
+        $blogs = Blog::latest()->take(8)->get();
+        return view('top.home', [
+            'blogs' => $blogs,
+        ]);
+    }
+
     public function mypage()
     {
         $user = \Auth::user();

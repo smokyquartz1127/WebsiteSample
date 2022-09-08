@@ -9,17 +9,15 @@ use App\Services\FileUploadService;
 
 class RoomController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $rooms = Room::all();
         return view('rooms.index', [
-            'rooms' => $rooms,
-        ]);
-    }
-    public function index_all()
-    {
-        $rooms = Room::all();
-        return view('rooms.index_all', [
             'rooms' => $rooms,
         ]);
     }

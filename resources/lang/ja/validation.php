@@ -159,6 +159,7 @@ return [
         'profile' => 'プロフィール',
         'comment' => 'コメント',
         'image' => '画像',
+        'first_paragraph' => '第一段落',
     ],
 
 ];

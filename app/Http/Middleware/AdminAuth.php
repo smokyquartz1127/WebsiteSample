@@ -16,9 +16,9 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->guard('admin')->check()){
+        if(auth()->check() && auth()->user()->is_admin == true){
             return $next($request);
         }
-        return redirect(route('admin.login'));
+        abort(403, 'This action is unauthorized.');
     }
 }

@@ -5,6 +5,15 @@
     <a href={{ route('adminblog') }}>&lt;戻る</a>
     <form method="POST" action="{{ route('blogs.store') }}" enctype="multipart/form-data" class="detail">
         @csrf
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div>
             <label>タイトル:
                 <input type="text" name="title">

@@ -3,16 +3,23 @@
 @section('main')
     <div class="row">
         <div class="blog_flex_container d-none d-lg-block">
-            <div class="blog_left_bar d-none d-lg-block">
+            <!--div class="blog_left_bar d-none d-lg-block">
                 <button class="slide_btn borderleft"><span>btn01</span></button>
                 <button class="slide_btn borderleft"><span>btn02</span></button>
                 <button class="slide_btn borderleft"><span>btn03</span></button>
                 <button class="slide_btn borderleft"><span>btn04</span></button>
                 <button class="slide_btn borderleft"><span>btn05</span></button>
-            </div>
+            </div-->
+            <ul class="blog_left_bar col-2 d-none d-lg-block" id="pagelink">
+                @forelse($blogs as $blog)
+                    <li><a class="slide_btn borderleft" href="#{{ $blog->id }}"><span>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $blog->created_at)->format('Y-m-d') }}</span></a></li>
+                @empty
+                    <p>現在、泊まれるお部屋はありません。</p>
+                @endforelse
+            </ul>
             <div class="row blog_container col-12 delay_scroll">
                 @forelse($blogs as $blog)
-                    <div class="blog_article lineText d-flex justify-content-between order-md-{{ $blogs_count - $blog->id }}">
+                    <div class="blog_article lineText d-flex justify-content-between order-md-{{ $blogs_count - $blog->id }}" id="{{ $blog->id }}">
                         <a href="{{ route('blogs.show_all', $blog->id) }}">
                             <div class="blog_thumbnail">
                                 <span class="mask">
