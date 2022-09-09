@@ -15,7 +15,7 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('admin_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title', 100);
             $table->string('first_paragraph', 500);
             $table->string('second_paragraph', 500);
@@ -23,7 +23,7 @@ class CreateBlogsTable extends Migration
             $table->string('image', 50);
             $table->timestamps();
 
-            $table->foreign('admin_id')->references('id')->on('admins');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

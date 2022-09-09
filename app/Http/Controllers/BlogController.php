@@ -87,7 +87,7 @@ class BlogController extends Controller
     {
         $path = $service->saveImage($request->file('image'));
         Blog::create([
-            'admin_id' => '2',
+            'user_id' => \Auth::user()->id,
             'title' => $request->title,
             'first_paragraph' => $request->first_paragraph,
             'second_paragraph' => $request->second_paragraph,

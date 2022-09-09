@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     protected $fillable = [
-        'admin_id', 'title', 'first_paragraph', 'second_paragraph', 'third_paragraph', 'image',
+        'user_id', 'title', 'first_paragraph', 'second_paragraph', 'third_paragraph', 'image',
     ];
 
     //リレーション
