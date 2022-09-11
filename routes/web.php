@@ -41,7 +41,7 @@ Route::resource('blogs', 'BlogController');
 Route::get('/blogs_all', 'AllController@blogs_index')->name('blogs.index_all');
 Route::get('/blogs_all_show/{blog}', 'AllController@blogs_show')->name('blogs.show_all');
 Route::get('/adminindex', 'BlogController@adminindex')->name('adminblog');
-Route::get('/adminshow/{blog}', 'BlogController@adminshow')->name('adminblogshow');
+Route::get('/adminshow/{blog}', 'BlogController@adminshow')->name('blogs.show_admin');
 Route::get('/blogs/{blog}/blog_editimage', 'BlogController@editImage')->name('blogs.editimage');
 Route::patch('/blogs/{blog}/blog_editimage', 'BlogController@updateImage')->name('blogs.updateimage');
 
