@@ -35,6 +35,12 @@
                 <input type="text" name="profile" class="form-control" value="{{ $user->profile }}">
             </div>
         </div>
+        <div class="form-group form-row">
+            <label class="col-md-3 col-form-label text-md-right">管理者: </label>
+            <div class="col-md-9">
+                <input type="text" name="is_admin" class="form-control" value="{{ $user->is_admin }}">
+            </div>
+        </div>
         <div class="form-row">
             <div class="col-md-11 text-right">
                 <input type="submit" value="上書き保存" class="btn btn-primary">

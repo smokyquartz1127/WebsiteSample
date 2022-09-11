@@ -3,14 +3,6 @@
 @section('main')
     <div class="row">
         <div class="blog_flex_container d-none d-lg-block">
-            <!--div class="blog_left_bar d-none d-lg-block">
-                <p><a href="{{ route('blogs.create') }}">＞新規ブログ登録</a></p>
-                <button class="slide_btn borderleft"><span>btn01</span></button>
-                <button class="slide_btn borderleft"><span>btn02</span></button>
-                <button class="slide_btn borderleft"><span>btn03</span></button>
-                <button class="slide_btn borderleft"><span>btn04</span></button>
-                <button class="slide_btn borderleft"><span>btn05</span></button>
-            </div-->
             <ul class="blog_left_bar col-2 d-none d-lg-block" id="pagelink">
                 <p><a href="{{ route('blogs.create') }}">＞新規ブログ登録</a></p>
                 @forelse($blogs as $blog)
@@ -32,7 +24,7 @@
                             <span class="admin_cap">
                                 <h2 class="blog_thumbnail_title">{{ $blog->title }}</h2>
                                 <p class="blog_thumbnail_explain">{{ Str::limit($blog->first_paragraph, 50) }}</p>
-                                <a href="{{ route('blogs.show', $blog->id) }}">
+                                <a href="{{ route('blogs.show_admin', $blog->id) }}">
                                     <p class="blog_detail">詳細を見る&gt;</p>
                                 </a>
                                 <div class="admin_edit">

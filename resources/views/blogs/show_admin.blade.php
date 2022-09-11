@@ -24,15 +24,9 @@
                 </li>
                 <li class="article_text">{{ $blog->second_paragraph }}</li>
                 <li class="article_text">{{ $blog->third_paragraph }}</li>
-            </div>
-            <div class="article_link">
-                @if($blog->id-1 > 0)
-                    <li><a href="{{ route('blogs.show', $previous) }}">&lt;前の記事</a></li>
-                @endif
-                <li><a href="{{ route('blogs.index') }}">ブログ一覧へ戻る</a></li>
-                @if($blog->id < $max)
-                    <li><a href="{{ route('blogs.show', $next) }}">次の記事&gt;</a></li>
-                @endif
+                    @if($blog->second_paragraph === '')
+                <li class="blogs_blank"></li>
+            @endif
             </div>
         </div>
     </div>

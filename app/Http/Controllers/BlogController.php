@@ -62,15 +62,9 @@ class BlogController extends Controller
     public function adminshow($id)
     {
         $blog = Blog::find($id);
-        $max = Blog::max('id');
-        $previous = $blog->where('id', '<', $id)->orderBy('id', 'desc')->first();
-        $next = $blog->where('id', '>', $id)->orderBy('id', 'asc')->first();
         return view('blogs.show_admin', [
             'title' => 'ふくろう通信',
             'blog' => $blog,
-            'max' => $max,
-            'previous' => $previous,
-            'next' => $next,
         ]);
     }
 

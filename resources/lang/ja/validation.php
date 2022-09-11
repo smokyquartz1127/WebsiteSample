@@ -160,6 +160,7 @@ return [
         'comment' => 'コメント',
         'image' => '画像',
         'first_paragraph' => '第一段落',
+        'room_id' => '部屋',
     ],
 
 ];

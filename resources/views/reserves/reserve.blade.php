@@ -23,8 +23,8 @@
                 </div>
                 <div class="form-group form-row">
                     <label class="col-form-label text-md-right">泊まりたいお部屋を選んでください
-                        <select name="room_id">
-                            <option>部屋を選択してください。</option>
+                        <select name="room_id" required>
+                            <option value=" " hidden>部屋を選択してください。</option>
                             @forelse($rooms as $room)
                                 <option value="{{ $room->id }}">{{ $room->name }}</option>
                             @empty

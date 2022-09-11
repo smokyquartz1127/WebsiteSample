@@ -63,7 +63,7 @@ class UserController extends Controller
     public function update(UserRequest $request){
         $user = \Auth::user();
         $user->update($request->only([
-            'name', 'email', 'profile',
+            'name', 'email', 'profile', 'is_admin',
         ]));
         session()->flash('success', '更新しました！');
         return redirect()->route('mypage');

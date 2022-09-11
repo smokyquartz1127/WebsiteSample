@@ -18,6 +18,9 @@
                 </li>
                 <li class="article_text">{{ $blog->second_paragraph }}</li>
                 <li class="article_text">{{ $blog->third_paragraph }}</li>
+                @if($blog->second_paragraph === '')
+                    <li class="blogs_blank"></li>
+                @endif
             </div>
         </div>
     </div>
